@@ -6,12 +6,11 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:15:09 by janhan            #+#    #+#             */
-/*   Updated: 2024/04/24 21:20:00 by janhan           ###   ########.fr       */
+/*   Updated: 2024/04/25 07:37:18 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Content.hpp"
-#include <string>
 
 Content::Content()
 {}
