@@ -6,16 +6,17 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/06/08 10:59:06 by janhan           ###   ########.fr        #
+#    Updated: 2024/06/10 15:43:27 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		megaphone
+NAME			=		phonebook
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	megaphone.cpp
+SRCS		=	PhoneBook.cpp			\
+				Content.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
 all : $(NAME)
