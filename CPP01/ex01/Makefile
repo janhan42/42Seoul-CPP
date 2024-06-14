@@ -6,7 +6,7 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/06/14 10:24:28 by janhan           ###   ########.fr        #
+#    Updated: 2024/06/14 19:23:17 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,7 @@ CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
 SRCS		=	Zombie.cpp				\
-				randomChump.cpp			\
-				newZombie.cpp			\
+				ZombieHorde.cpp			\
 				main.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
