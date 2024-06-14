@@ -6,10 +6,11 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:08:50 by janhan            #+#    #+#             */
-/*   Updated: 2024/04/25 07:35:30 by janhan           ###   ########.fr       */
+/*   Updated: 2024/06/14 08:12:33 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef CONTENT_HPP
 # define CONTENT_HPP
 

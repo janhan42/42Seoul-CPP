@@ -6,14 +6,14 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/04/24 20:55:44 by janhan           ###   ########.fr        #
+#    Updated: 2024/06/14 09:18:56 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=		megaphone
 
-CC				=		c++
-CFLAGS			=		-Wall -Wextra -Werror -std=c++98
+CXX				=		c++
+CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
 SRCS		=	megaphone.cpp
 OBJS		=	$(SRCS:.cpp=.o)
@@ -22,12 +22,12 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	@echo $(CURSIVE)$(YELLOW) "      - Making $(NAME) -" $(NONE)
-	@$(CC) $(CFLAGS) $(OBJS) -o $@
+	@$(CXX) $(CXXFLAGS) $(OBJS) -o $@
 	@echo $(CURSIVE)$(YELLOW) "        - Compiling $(NAME) -" $(NONE)
 
 %.o : %.cpp
 	@echo $(CURSIVE)$(YELLOW) "      - Making object files -" $(NONE)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean :
 	@rm -fr $(OBJS)

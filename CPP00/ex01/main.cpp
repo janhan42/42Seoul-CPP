@@ -6,12 +6,11 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 07:32:42 by janhan            #+#    #+#             */
-/*   Updated: 2024/04/25 07:41:23 by janhan           ###   ########.fr       */
+/*   Updated: 2024/06/14 08:08:55 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include <string>
 
 int main()
 {
@@ -26,11 +25,11 @@ int main()
 			phone_book.add();
 		else if (cmd == "SEARCH")
 		{
-			phone_book.show_content();
+			phone_book.show_contents();
 			std::cout << "Index: ";
 			std::getline(std::cin, cmd);
 			if (cmd.size() == 1 && ('0' <= cmd[0] && cmd[0] <= '9'))
-				phone_book.shon_content_by_index(cmd[0] - '0');
+				phone_book.show_content_by_index(cmd[0] - '0');
 			else
 				std::cout << "Wrong format." << std::endl;
 		}
