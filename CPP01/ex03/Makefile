@@ -6,18 +6,18 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/06/14 10:24:28 by janhan           ###   ########.fr        #
+#    Updated: 2024/06/14 23:03:32 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		zombie
+NAME			=		weapon
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	Zombie.cpp				\
-				randomChump.cpp			\
-				newZombie.cpp			\
+SRCS		=	HumanA.cpp			\
+				HumanB.cpp			\
+				Weapon.cpp			\
 				main.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
