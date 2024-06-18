@@ -6,18 +6,16 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/06/14 10:24:28 by janhan           ###   ########.fr        #
+#    Updated: 2024/06/19 07:25:09 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		zombie
+NAME			=		harl
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	Zombie.cpp				\
-				randomChump.cpp			\
-				newZombie.cpp			\
+SRCS		=	Harl.cpp				\
 				main.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
