@@ -6,17 +6,19 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/06/14 09:19:45 by janhan           ###   ########.fr        #
+#    Updated: 2024/06/22 11:09:43 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		account
+NAME			=		bsp
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	Account.cpp			\
-				tests.cpp
+SRCS		=	Fixed.cpp			\
+				Point.cpp			\
+				bsp.cpp				\
+				main.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
 all : $(NAME)
