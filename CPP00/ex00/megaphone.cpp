@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:49:35 by janhan            #+#    #+#             */
-/*   Updated: 2024/04/24 20:53:58 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/02 08:00:00 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int main( int ac, char **av)
 		for (int j = 0; str[j]; j++)
 			str[j] = std::toupper(str[j]);
 		std::cout << str;
+		
 	}
 	std::cout << std::endl;
 	return (0);
