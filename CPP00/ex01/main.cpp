@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 07:32:42 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/03 18:09:01 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/04 17:09:44 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main()
 	std::string	cmd;
 	PhoneBook	phone_book;
 
-	while (cmd != "EXIT")
+	while (1)
 	{
 		std::cout << "usage: ADD SEARCH EXIT" << std::endl;
 		std::cout << "Command: ";
@@ -34,6 +34,8 @@ int main()
 			else
 				std::cout << "Wrong format." << std::endl;
 		}
+		else if (cmd == "EXIT")
+			break ;
 		if (std::cin.eof())
 		{
 			std::cout << std::endl;

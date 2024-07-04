@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 10:15:46 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/14 10:18:29 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/04 17:28:51 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 Zombie::Zombie(std::string name)
 {
-	this->_name = name;
-	std::cout << "[Constructed] : " << name << std::endl;
+	this->mName = name;
+	std::cout << "[Constructed] : " << mName << std::endl;
 }
 
 Zombie::~Zombie(void)
 {
-	std::cout << "[Destructed] : " << this->_name << std::endl;
+	std::cout << "[Destructed] : " << this->mName << std::endl;
 }
 
 void	Zombie::announce(void) const
 {
-	std::cout << this->_name << " : BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->mName << " : BraiiiiiiinnnzzzZ..." << std::endl;
 }

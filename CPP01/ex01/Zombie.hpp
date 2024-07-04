@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 15:43:04 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/14 19:20:58 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/04 17:33:01 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,14 @@
 
 class Zombie
 {
-	private:
-		std::string _name;
-
 	public:
 		Zombie();
 		Zombie( std::string name );
 		~Zombie( void );
 		void	announce( void ) const;
 		void	setName( std::string name );
-
+	private:
+		std::string mName;
 };
 
 Zombie	*zombieHorde( int N, std::string name );

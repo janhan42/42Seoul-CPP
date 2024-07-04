@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:23:29 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/03 07:51:05 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/04 16:43:04 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,10 @@ void	PhoneBook::Add()
 void	PhoneBook::printValue(std::string str)
 {
 	int	str_len = str.length();
-	for(int i = 0; i < 10 - str_len; i++)
-		std::cout << " ";
 	if (str_len <= 10)
-		std::cout << str;
+		std::cout << std::setfill(' ') << std::setw(10) << str;
 	else
-		std::cout << str.substr(0, 9) << '.';
+		std::cout << std::setfill(' ' ) << std::setw(9) << str.substr(0, 9) << '.';
 	std::cout << "|";
 }
 

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 14:53:58 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/14 09:21:31 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/04 17:16:01 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ void	Account::makeDeposit(int deposit)
 {
 	Account::_displayTimestamp();
 	std::cout
-		<< " index"
+		<< " index:"
 		<< this->_accountIndex
 		<< ";p_amount:"
 		<< this->_amount
@@ -122,7 +122,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 {
 	Account::_displayTimestamp();
 	std::cout
-		<< " index"
+		<< " index:"
 		<< this->_accountIndex
 		<< ";p_amount:"
 		<< this->_amount;

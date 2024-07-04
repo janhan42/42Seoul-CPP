@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 10:22:53 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/14 10:25:23 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/04 17:29:51 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main(void)
 	delete heap;
 
 	{
+		std::cout << "______________stack2 start_____________" << std::endl;
 		Zombie stack2("stack2");
 		stack2.announce();
 	}
