@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:20:14 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/03 07:49:15 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/05 07:07:24 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <cctype>
 
 class PhoneBook
 {
@@ -35,5 +36,6 @@ class PhoneBook
 		int		mCount;
 		void	printValue(std::string str);
 		void	printContact(int index);
+		bool	isOnlySpace(const std::string& str) const;
 };
 #endif

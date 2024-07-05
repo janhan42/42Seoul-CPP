@@ -6,11 +6,12 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:23:29 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/04 16:43:04 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/05 07:08:18 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
 
 PhoneBook::PhoneBook()
 {
@@ -29,6 +30,11 @@ void	PhoneBook::Add()
 	{
 		std::cout << "First name: ";
 		std::getline(std::cin, str);
+		if (isOnlySpace(str) == true)
+		{
+			std:: cout << "contact can't have empty fields." << std::endl;
+			str = "";
+		}
 		if (str != "")
 			this->mContacts[this->mIndex].SetFirstName(str);
 	}
@@ -37,6 +43,11 @@ void	PhoneBook::Add()
 	{
 		std::cout << "Last name: ";
 		std::getline(std::cin, str);
+		if (isOnlySpace(str) == true)
+		{
+			std:: cout << "contact can't have empty fields." << std::endl;
+			str = "";
+		}
 		if (str != "")
 			this->mContacts[this->mIndex].SetLastName(str);
 	}
@@ -45,6 +56,11 @@ void	PhoneBook::Add()
 	{
 		std::cout << "Nick name: ";
 		std::getline(std::cin, str);
+		if (isOnlySpace(str) == true)
+		{
+			std:: cout << "contact can't have empty fields." << std::endl;
+			str = "";
+		}
 		if (str != "")
 			this->mContacts[this->mIndex].SetNickName(str);
 	}
@@ -53,6 +69,11 @@ void	PhoneBook::Add()
 	{
 		std::cout << "Phone number: ";
 		std::getline(std::cin, str);
+		if (isOnlySpace(str) == true)
+		{
+			std:: cout << "contact can't have empty fields." << std::endl;
+			str = "";
+		}
 		if (str != "")
 			this->mContacts[this->mIndex].SetPhoneNumber(str);
 	}
@@ -61,6 +82,11 @@ void	PhoneBook::Add()
 	{
 		std::cout << "Secret: ";
 		std::getline(std::cin, str);
+		if (isOnlySpace(str) == true)
+		{
+			std:: cout << "contact can't have empty fields." << std::endl;
+			str = "";
+		}
 		if (str != "")
 			this->mContacts[this->mIndex].SetSecret(str);
 	}
@@ -134,4 +160,16 @@ void	PhoneBook::ShowContactByIndex(int index)
 int	PhoneBook::GetCount() const
 {
 	return (this->mCount);
+}
+
+bool	PhoneBook::isOnlySpace(const std::string& str) const
+{
+	int	str_len = str.size();
+
+	for (int i = 0; i < str_len; i++)
+	{
+		if (std::isspace(str[i]) == false)
+			return (false);
+	}
+	return (true);
 }
