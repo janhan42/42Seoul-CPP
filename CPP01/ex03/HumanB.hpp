@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 22:56:25 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/14 22:58:38 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/05 16:00:21 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ class HumanB
 		void	setWeapon(Weapon& weapon);
 
 	private:
-		std::string _name;
-		Weapon*		_Weapon;
+		std::string mName;
+		Weapon*		mWeapon;
 };
 
 #endif

@@ -6,13 +6,11 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 06:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/22 11:13:31 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/06 07:01:56 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <_stdio.h>
-#include <math.h>
 
 Fixed::Fixed(void) : _value(0)
 {}

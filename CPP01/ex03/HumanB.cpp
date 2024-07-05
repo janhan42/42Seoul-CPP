@@ -6,32 +6,32 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 22:59:34 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/14 23:02:08 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/05 16:00:41 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : _name(name)
+HumanB::HumanB(std::string name) : mName(name)
 {
-	_Weapon = NULL;
-	std::cout << "Human B " << this->_name << " created." << std::endl;
+	mWeapon = NULL;
+	std::cout << "Human B " << this->mName << " created." << std::endl;
 }
 
 HumanB::~HumanB(void)
 {
-	std::cout << "Human B " << this->_name << " destroyed." << std::endl;
+	std::cout << "Human B " << this->mName << " destroyed." << std::endl;
 }
 
 void	HumanB::attack(void)
 {
-	if (this->_Weapon == NULL)
-		std::cout << this->_name << " cannot attack: weapon is missing." << std::endl;
+	if (this->mWeapon == NULL)
+		std::cout << this->mName << " cannot attack: weapon is missing." << std::endl;
 	else
-		std::cout << this->_name << " attacks with their " << this->_Weapon->getType() << std::endl;
+		std::cout << this->mName << " attacks with their " << this->mWeapon->getType() << std::endl;
 }
 
 void	HumanB::setWeapon(Weapon &weapon)
 {
-	this->_Weapon = &weapon;
+	this->mWeapon = &weapon;
 }

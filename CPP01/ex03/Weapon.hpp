@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 22:47:37 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/14 22:51:24 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/05 16:01:38 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ class Weapon
 		~Weapon(void);
 
 		void				setType(std::string type);
-		std::string	const&	getType() const;
+		const std::string&	getType() const;
 	private:
-		std::string _type;
+		std::string mType;
 };
 
 #endif

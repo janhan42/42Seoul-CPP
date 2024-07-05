@@ -6,13 +6,11 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 10:46:39 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/22 10:49:28 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/06 07:02:11 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef POINT_HPP
-# define POINT_HPP
 
 # include "Fixed.hpp"
 
@@ -34,5 +32,3 @@ class Point
 };
 
 bool	bsp(const Point a, const Point b, const Point c, const Point point);
-
-#endif

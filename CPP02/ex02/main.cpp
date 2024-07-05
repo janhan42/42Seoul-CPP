@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 05:56:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/21 15:40:12 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/05 16:56:23 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main( void )
 {
-	Fixed		a;
-	Fixed const	b( Fixed( 5.05f ) * Fixed( 2 ) );
+	Fixed a;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
 	std::cout << a << std::endl;
 	std::cout << ++a << std::endl;

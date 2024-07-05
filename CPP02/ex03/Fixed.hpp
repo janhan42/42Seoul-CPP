@@ -6,13 +6,11 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 05:56:41 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/21 15:41:28 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/06 07:02:05 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef FIXED_HPP
-# define FIXED_HPP
 
 # include <iostream>
 
@@ -62,5 +60,3 @@ class Fixed
 };
 
 std::ostream&	operator<<(std::ostream &str, const Fixed& fixed); // overload of the istretion (<<) operator
-
-#endif
