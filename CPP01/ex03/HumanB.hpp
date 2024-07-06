@@ -6,13 +6,11 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 22:56:25 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/05 16:00:21 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/06 07:04:12 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef HUMAN_B_HPP
-# define HUMAN_B_HPP
 
 # include <iostream>
 # include <string>
@@ -31,5 +29,3 @@ class HumanB
 		std::string mName;
 		Weapon*		mWeapon;
 };
-
-#endif

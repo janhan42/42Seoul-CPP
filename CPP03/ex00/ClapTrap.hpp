@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/14 22:51:39 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/06 07:04:08 by janhan           ###   ########.fr       */
+/*   Created: 2024/07/06 08:58:57 by janhan            #+#    #+#             */
+/*   Updated: 2024/07/06 09:27:48 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-# include <iostream>
-# include <string>
-# include "Weapon.hpp"
+#include <string>
+#include <iostream>
 
-class HumanA
+class ClapTrap
 {
 	public:
-		HumanA(std::string name, Weapon& weapon);
-		~HumanA(void);
+		ClapTrap(void);
+		ClapTrap(std::string name);
+		ClapTrap(const ClapTrap& other);
+		ClapTrap &operator=(const ClapTrap& other);
+		~ClapTrap(void);
 
-		void	attack(void);
+		void			attack(const std::string& target);
+		void			takeDamege(unsigned int amount);
+		void			beRepaired(unsigned int amount);
 	private:
-		std::string	mName;
-		Weapon&		mWeapon;
+		std::string		mName;
+		unsigned int	mHitPoint;
+		unsigned int	mEnergyPoint;
+		unsigned int	mAttackDamege;
 };
-

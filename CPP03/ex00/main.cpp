@@ -5,31 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/14 10:22:53 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/06 09:36:34 by janhan           ###   ########.fr       */
+/*   Created: 2024/07/06 09:24:24 by janhan            #+#    #+#             */
+/*   Updated: 2024/07/06 09:30:10 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "ClapTrap.hpp"
 
-int	main(void)
+int main(void)
 {
-	Zombie	stack("stack");
-	Zombie	*heap = newZombie("heap");
+	ClapTrap	clap1("Good");
+	ClapTrap	clap2("Bad");
+	ClapTrap	clap3("Same");
+	ClapTrap	clap4 = clap3;
 
-	stack.announce();
-	heap->announce();
-	delete heap;
+	clap1.attack("monster 1");
+	clap2.attack("monster 2");
 
-	{
-		std::cout << "______________stack2 start_____________" << std::endl;
-		Zombie stack2("stack2");
-		stack2.announce();
-	}
-	std::cout << "______________stack2 end_____________" << std::endl;
+	clap1.takeDamege(5);
+	clap2.takeDamege(4);
 
-	randomChump("stack_random");
+	clap1.beRepaired(5);
+	clap2.beRepaired(4);
 
-	std::cout << "\n\n________________________\n";
-	return (0);
+	clap1.takeDamege(10);
+	clap1.takeDamege(10);
+	clap2.takeDamege(10);
+	clap2.takeDamege(10);
+
+	clap1.attack("NPC");
+	clap2.attack("NPC");
 }

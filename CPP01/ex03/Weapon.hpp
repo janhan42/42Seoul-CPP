@@ -6,13 +6,11 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 22:47:37 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/05 16:01:38 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/06 07:04:17 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
 
 # include <iostream>
 # include <string>
@@ -28,5 +26,3 @@ class Weapon
 	private:
 		std::string mType;
 };
-
-#endif
