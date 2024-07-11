@@ -6,18 +6,18 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/06/22 11:09:43 by janhan           ###   ########.fr        #
+#    Updated: 2024/07/08 14:39:10 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		bsp
+NAME			=		FragTrap
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	Fixed.cpp			\
-				Point.cpp			\
-				bsp.cpp				\
+SRCS		=	ClapTrap.cpp		\
+				ScavTrap.cpp		\
+				FragTrap.cpp		\
 				main.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 

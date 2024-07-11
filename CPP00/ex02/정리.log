@@ -8,8 +8,17 @@
 [19920104_091532] index:7;amount:16576;created
 생성자 호출 부분
 
+index : 계좌 번호
+amount : 현재 계좌의 잔액
+created : 생성자 메세지
+
 [19920104_091532] accounts:8;total:20049;deposits:0;withdrawals:0
 displayAccountsInfos() 부분
+
+accounts : 총 계좌 수
+total : 총 계좌의 잔액 합산
+deposits : 계좌에 입금된 총 횟수
+withdrawals : 계좌에 출금된 총 횟수
 
 [19920104_091532] index:0;amount:42;deposits:0;withdrawals:0
 [19920104_091532] index:1;amount:54;deposits:0;withdrawals:0
@@ -21,6 +30,9 @@ displayAccountsInfos() 부분
 [19920104_091532] index:7;amount:16576;deposits:0;withdrawals:0
 각각의 displaystatus
 
+deposits : 계좌에 입금된 총 횟수
+withdrawals : 계좌에 출금된 총 횟수
+
 [19920104_091532] index:0;p_amount:42;deposit:5;amount:47;nb_deposits:1
 [19920104_091532] index:1;p_amount:54;deposit:765;amount:819;nb_deposits:1
 [19920104_091532] index:2;p_amount:957;deposit:564;amount:1521;nb_deposits:1
@@ -30,6 +42,12 @@ displayAccountsInfos() 부분
 [19920104_091532] index:6;p_amount:754;deposit:9;amount:763;nb_deposits:1
 [19920104_091532] index:7;p_amount:16576;deposit:20;amount:16596;nb_deposits:1
 makeDeposit() 부분
+
+p_amount : 이전 계좌의 잔액
+deposit : 입금 금액
+amount : 현재 계좌의 잔액
+nb_deposits: 계좌에 입금된 총 횟수
+nb_withdrawals: 계좌에서 인출된 총 횟수
 
 [19920104_091532] accounts:8;total:21524;deposits:8;withdrawals:0
 displayAccountsInfos() 부분
@@ -76,3 +94,19 @@ displayAccountsInfos() 부분
 [19920104_091532] index:6;amount:106;closed
 [19920104_091532] index:7;amount:8942;close
 소멸자 호출
+
+index: 계좌 번호를 나타냅니다.
+amount: 현재 계좌의 잔액을 나타냅니다.
+created: 계좌가 생성되었음을 나타냅니다.
+deposits: 계좌에 입금된 총 횟수를 나타냅니다.
+withdrawals: 계좌에서 인출된 총 횟수를 나타냅니다.
+p_amount: 입금 또는 인출 전에 계좌의 잔액을 나타냅니다.
+deposit: 계좌에 입금된 금액을 나타냅니다.
+withdrawal: 계좌에서 인출된 금액을 나타냅니다.
+nb_deposits: 계좌에 입금된 총 횟수를 나타냅니다.
+nb_withdrawals: 계좌에서 인출된 총 횟수를 나타냅니다.
+withdrawal
+: 인출이 거부되었음을 나타냅니다. (계좌 잔액이 부족할 때 발생)
+total: 모든 계좌의 총 잔액을 나타냅니다.
+accounts: 총 계좌 수를 나타냅니다.
+closed: 계좌가 닫혔음을 나타냅니다.
