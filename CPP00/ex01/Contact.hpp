@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:08:50 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/03 18:56:29 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/12 07:07:33 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ class Contact
 		void				SetNickName(const std::string& nickName);
 		void				SetPhoneNumber(const std::string& phoneNumber);
 		void				SetSecret(const std::string& secret);
-		const std::string	GetFirstName() const;
-		const std::string	GetLastName() const;
-		const std::string	GetNickName() const;
-		const std::string	GetPhoneNumber() const;
-		const std::string	GetSecret() const;
+		const std::string	GetFirstName(void) const;
+		const std::string	GetLastName(void) const;
+		const std::string	GetNickName(void) const;
+		const std::string	GetPhoneNumber(void) const;
+		const std::string	GetSecret(void) const;
 	private:
 		std::string			mFirstName;
 		std::string			mLastName;

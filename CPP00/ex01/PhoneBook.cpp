@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:23:29 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/05 07:08:18 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/12 07:16:19 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ PhoneBook::PhoneBook()
 PhoneBook::~PhoneBook()
 {}
 
-void	PhoneBook::Add()
+void	PhoneBook::Add(void)
 {
 	std::string str;
 
@@ -97,25 +97,6 @@ void	PhoneBook::Add()
 		this->mIndex = 0;
 }
 
-void	PhoneBook::printValue(std::string str)
-{
-	int	str_len = str.length();
-	if (str_len <= 10)
-		std::cout << std::setfill(' ') << std::setw(10) << str;
-	else
-		std::cout << std::setfill(' ' ) << std::setw(9) << str.substr(0, 9) << '.';
-	std::cout << "|";
-}
-
-void	PhoneBook::printContact(int index)
-{
-	std::cout << "|         " << index << "|";
-	this->printValue(this->mContacts[index].GetFirstName());
-	this->printValue(this->mContacts[index].GetLastName());
-	this->printValue(this->mContacts[index].GetNickName());
-	std::cout << "\n";
-}
-
 void	PhoneBook::ShowContacts()
 {
 	std::cout
@@ -160,6 +141,25 @@ void	PhoneBook::ShowContactByIndex(int index)
 int	PhoneBook::GetCount() const
 {
 	return (this->mCount);
+}
+
+void	PhoneBook::printValue(std::string str)
+{
+	int	str_len = str.length();
+	if (str_len <= 10)
+		std::cout << std::setfill(' ') << std::setw(10) << str;
+	else
+		std::cout << std::setfill(' ' ) << std::setw(9) << str.substr(0, 9) << '.';
+	std::cout << "|";
+}
+
+void	PhoneBook::printContact(int index)
+{
+	std::cout << "|         " << index << "|";
+	this->printValue(this->mContacts[index].GetFirstName());
+	this->printValue(this->mContacts[index].GetLastName());
+	this->printValue(this->mContacts[index].GetNickName());
+	std::cout << "\n";
 }
 
 bool	PhoneBook::isOnlySpace(const std::string& str) const
