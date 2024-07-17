@@ -6,19 +6,21 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/06/22 11:09:43 by janhan           ###   ########.fr        #
+#    Updated: 2024/07/17 11:33:56 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		bsp
+NAME			=		Animal
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	Fixed.cpp			\
-				Point.cpp			\
-				bsp.cpp				\
-				main.cpp
+SRCS		=	main.cpp				\
+				Animal.cpp				\
+				Cat.cpp					\
+				Dog.cpp					\
+				WrongAnimal.cpp			\
+				WrongCat.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
 all : $(NAME)

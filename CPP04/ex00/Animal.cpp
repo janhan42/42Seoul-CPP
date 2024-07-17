@@ -6,40 +6,40 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 22:07:42 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/09 22:11:20 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/17 10:50:29 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal(void)
-: _type("<NULL>")
+: mType("<NULL>")
 {
-	std::cout << "Animal construrtor " << _type << std::endl;
+	std::cout << "Animal construrtor " << mType << std::endl;
 }
 
 Animal::Animal(std::string type)
-: _type(type)
+: mType(type)
 {
-	std::cout << "Animal constructor " << _type << std::endl;
+	std::cout << "Animal constructor " << mType << std::endl;
 }
 
 Animal::Animal(const Animal& other)
 {
-	_type = other._type;
-	std::cout << "Animal copy constructor " << _type << std::endl;
+	mType = other.mType;
+	std::cout << "Animal copy constructor " << mType << std::endl;
 }
 
 Animal& Animal::operator=(const Animal &othre)
 {
-	_type = othre._type;
-	std::cout << "Animal copy assignment operator " << _type << std::endl;
+	mType = othre.mType;
+	std::cout << "Animal copy assignment operator " << mType << std::endl;
 	return (*this);
 }
 
 Animal::~Animal(void)
 {
-	std::cout << "Animal destructor " << _type << std::endl;
+	std::cout << "Animal destructor " << mType << std::endl;
 }
 
 void	Animal::makeSound(void) const
@@ -49,5 +49,5 @@ void	Animal::makeSound(void) const
 
 std::string Animal::getType(void) const
 {
-	return (this->_type);
+	return (this->mType);
 }
