@@ -6,18 +6,18 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 07:14:12 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/19 07:58:23 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/29 18:10:45 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-Harl::Harl(void)
+Harl::Harl()
 {
 	std::cout << "Harl created." << std::endl;
 }
 
-Harl::~Harl(void)
+Harl::~Harl()
 {
 	std::cout << "Harl Destroyed." << std::endl;
 }
@@ -73,10 +73,10 @@ void	Harl::complain(std::string level)
 		case 0:
 		{
 			this->debug();
-			__attribute__((fallthrough));
-		}
-		case 1:
-		{
+			__attribute__((fallthrough));	// C와 C++에서 switch 문을 사용할때
+		}									// break를 넣지 않으면 다음 case로 이동하게 되는데
+		case 1:								// 이를 fallthrough라고하고 컴파일러 경고 메세지를 출력하지 않게 하고
+		{									// 의도적으로 명시 하기 위해서 __atrribute__((fallthorugh)) 를 사용한다.
 			this->info();
 			__attribute__((fallthrough));
 		}

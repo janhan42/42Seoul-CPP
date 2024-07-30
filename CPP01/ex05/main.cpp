@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 07:24:09 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/19 07:26:27 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/29 16:40:54 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ int main(void)
 {
 	Harl	harl;
 
-	std::cout << "\n" << std::endl;
+	std::cout <<  std::endl;
 	harl.complain("DEBUG");
-	std::cout << "\n" << std::endl;
+	std::cout <<  std::endl;
 	harl.complain("INFO");
-	std::cout << "\n" << std::endl;
+	std::cout <<  std::endl;
 	harl.complain("WARNING");
-	std::cout << "\n" << std::endl;
+	std::cout <<  std::endl;
 	harl.complain("ERROR");
-	std::cout << "\n" << std::endl;
-
+	std::cout <<  std::endl;
+	harl.complain("Worng");
+	std::cout << std::endl;
 	return (0);
 }

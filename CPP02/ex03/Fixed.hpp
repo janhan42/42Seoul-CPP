@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 05:56:41 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/06 07:02:05 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/30 19:32:40 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 class Fixed
 {
 	public:
-		Fixed(void);							// Default constructor
+		Fixed();								// Default constructor
 		Fixed(const Fixed& fixed);				// Copy constructor
 		Fixed(const int num);					// Int constructor [ ]
 		Fixed(const float num);					// float constructor [ ]
-		~Fixed(void);							// Destructor
+		~Fixed();								// Destructor
 
 		Fixed&	operator=(const Fixed& other);	// Copy assignment operator
 
@@ -54,9 +54,9 @@ class Fixed
 		float	toFloat(void) const;
 		int		toInt(void) const;
 	private:
-		int	_value;
-		static const int _bits = 8;
-		int	_pow_int(int base, int exponent) const;
+		int	mValue;
+		static const int mBits = 8;
+		int	mPowInt(int base, int exponent) const;
 };
 
 std::ostream&	operator<<(std::ostream &str, const Fixed& fixed); // overload of the istretion (<<) operator

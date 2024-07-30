@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 07:14:12 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/19 07:54:19 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/29 16:40:38 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,8 @@ void	Harl::complain(std::string level)
 	for (int i = 0; i < 4; i++)
 		if (level == levels[i])
 			(this->*func[i])();
+	/*
+	levels에서 없는 커맨드가 들어올 경우
+	아무것도 실행하지 않는 방향의 예외 처리 or 없는 컴플레인인지 메세지 출력
+	*/
 }

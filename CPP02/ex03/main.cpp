@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 05:56:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/22 11:09:03 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/30 19:50:10 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ int main( void )
 		std::cout << "true" << std::endl;
 	else
 		std::cout << "fasle" << std::endl;
-
+	Point test;
+	Point test2(0.5f, 0.5f);
+	test =  test2;
+	std::cout << test.getX() << test.getY() << std::endl;
 	return 0;
 }

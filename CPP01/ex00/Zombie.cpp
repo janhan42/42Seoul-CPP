@@ -6,24 +6,30 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 10:15:46 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/06 09:35:25 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/29 10:25:16 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name)
+Zombie::Zombie()
+: mName("<NULL>")
 {
-	this->mName = name;
-	std::cout << "[Constructed] : " << mName << std::endl;
+	std::cout << "[Constructor] : " << mName << std::endl;
 }
 
-Zombie::~Zombie(void)
+Zombie::Zombie(const std::string& name)
+: mName(name)
 {
-	std::cout << "[Destructed] : " << this->mName << std::endl;
+	std::cout << "[Constructor] : " << mName << std::endl;
+}
+
+Zombie::~Zombie()
+{
+	std::cout << "[Destructor] : " << mName << std::endl;
 }
 
 void	Zombie::announce(void) const
 {
-	std::cout << this->mName << " : BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << mName << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

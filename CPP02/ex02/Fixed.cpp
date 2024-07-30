@@ -6,121 +6,123 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 06:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/16 08:09:13 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/30 19:32:24 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <math.h>
 
-Fixed::Fixed(void) : mValue(0)
+Fixed::Fixed()
+: mValue(0)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed& fixed)
+: mValue(fixed.mValue)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = fixed;
 }
 
-Fixed::Fixed(const int num) : mValue(num << this->mBits)
+Fixed::Fixed(const int num)
+: mValue(num << mBits)
 {
 	std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(const float num) : mValue(roundf(num * this->_pow_int(2, this->mBits)))
+Fixed::Fixed(const float num)
+: mValue(roundf(num * mPowInt(2, mBits)))
 {
 	std::cout << "Float constructor called" << std::endl;
-}
-
-Fixed::~Fixed(void)
-{
-	std::cout << "Destructor called" << std::endl;
 }
 
 Fixed& Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other)
-		this->mValue = other.getRawBits();
+		mValue = other.getRawBits();
 	return (*this);
 }
 
+Fixed::~Fixed()
+{
+	std::cout << "Destructor called" << std::endl;
+}
 
 bool	Fixed::operator>(const Fixed& other) const
 {
-	return (this->getRawBits() > other.getRawBits());
+	return (getRawBits() > other.getRawBits());
 }
 
 bool	Fixed::operator<(const Fixed& other) const
 {
-	return (this->getRawBits() < other.getRawBits());
+	return (getRawBits() < other.getRawBits());
 }
 
 bool	Fixed::operator>=(const Fixed& other) const
 {
-	return (this->getRawBits() >= other.getRawBits());
+	return (getRawBits() >= other.getRawBits());
 }
 
 bool	Fixed::operator<=(const Fixed& other) const
 {
-	return (this->getRawBits() <= other.getRawBits());
+	return (getRawBits() <= other.getRawBits());
 }
 
 bool	Fixed::operator==(const Fixed& other) const
 {
-	return (this->getRawBits() == other.getRawBits());
+	return (getRawBits() == other.getRawBits());
 }
 
 bool	Fixed::operator!=(const Fixed& other) const
 {
-	return (this->getRawBits() != other.getRawBits());
+	return (getRawBits() != other.getRawBits());
 }
 
 Fixed	Fixed::operator+(const Fixed& other) const
 {
-	return (Fixed(this->toFloat() + other.toFloat()));
+	return (Fixed(toFloat() + other.toFloat()));
 }
 
 Fixed	Fixed::operator-(const Fixed& other) const
 {
-	return (Fixed(this->toFloat() - other.toFloat()));
+	return (Fixed(toFloat() - other.toFloat()));
 }
 
 Fixed	Fixed::operator*(const Fixed& other) const
 {
-	return (Fixed(this->toFloat() * other.toFloat()));
+	return (Fixed(toFloat() * other.toFloat()));
 }
 
 Fixed	Fixed::operator/(const Fixed& other) const
 {
-	return (Fixed(this->toFloat() / other.toFloat()));
+	return (Fixed(toFloat() / other.toFloat()));
 }
 
 Fixed&	Fixed::operator++(void)
 {
-	this->mValue++;
+	mValue++;
 	return (*this);
 }
 
 Fixed&	Fixed::operator--(void)
 {
-	this->mValue--;
+	mValue--;
 	return (*this);
 }
 
 const Fixed	Fixed::operator++(int)
 {
 	const Fixed temp = *this;
-	this->mValue++;
+	mValue++;
 	return (temp);
 }
 
 const Fixed	Fixed::operator--(int)
 {
 	const Fixed temp = *this;
-	this->mValue--;
+	mValue--;
 	return (temp);
 }
 
@@ -159,22 +161,22 @@ const Fixed& Fixed::max(const Fixed& a, const Fixed& b)
 int	Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
-	return (this->mValue);
+	return (mValue);
 }
 
 void	Fixed::setRawBits(const int raw)
 {
-	this->mValue = raw;
+	mValue = raw;
 }
 
 float	Fixed::toFloat(void) const
 {
-	return (float)this->mValue / (float)(this->_pow_int(2, this->mBits));
+	return (float)mValue / (float)(mPowInt(2, mBits));
 }
 
 int		Fixed::toInt(void) const
 {
-	return (this->mValue >> this->mBits);
+	return (mValue >> mBits);
 }
 
 
@@ -183,7 +185,7 @@ std::ostream&	operator<<(std::ostream& str, const Fixed& fixed)
 	return str << fixed.toFloat();
 }
 
-int	Fixed::_pow_int(int base, int exponent) const
+int	Fixed::mPowInt(int base, int exponent) const
 {
 	int	res = 1;
 	if (exponent == 0)

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 05:56:41 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/06 09:05:19 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/30 19:07:29 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,38 @@
 
 # include <iostream>
 
+/*
+
+	Create a class in Orthodox Canonical Form that represents a fixed-porint numer:
+
+	- Private member:
+		- An integer to store the fixed-point number value.
+		- A static constant integer to store the number of fractional bits.
+		Its value will always be the integer literal 8.
+
+	- Public member:
+		- A default constructor that inialize the fixed-point number value to 0.
+		- A copy constructor.
+		- A copy assignment operetor overload.
+		- A detructor.
+		- A member function int getRawBits( void ) const;
+		that returns the raw value of the fixed-point value.
+		- A member function void setRawBits( int const raw );
+		that sets the raw value of the fixed-point number.
+ */
+
 class Fixed
 {
 	public:
-		Fixed(void);							// Default constructor
-		Fixed(const Fixed& fixed);				// Copy constructor
-		Fixed &operator=(const Fixed& other);	// Copy assignment operator
-		~Fixed(void);							// Destructor
+		Fixed();							/* Default constructor */
+		Fixed(const Fixed& fixed);				/* copy constructor */
+		Fixed &operator=(const Fixed& other);	/* copy assignment operator overload */
+		~Fixed();							/* Destructor */
 
-		int		getRawBits(void) const;
-		void	setRawBits(const int raw);
+		int		getRawBits(void) const;			/* Subject function */
+		void	setRawBits(const int raw);		/* Subject function */
 	private:
-		int	mValue;
-		static const int mBit = 8;
+		int	mValue;								/* integer to store the fixed-point number value */
+		static const int mBit = 8;				/* ststic constant integer to store the number of fractional bits*/
 };
+

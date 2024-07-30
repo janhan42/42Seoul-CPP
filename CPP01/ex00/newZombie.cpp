@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 10:18:50 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/14 10:19:16 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/26 15:15:53 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 Zombie	*newZombie(std::string name)
 {
-	return new Zombie(name);
+	return (new Zombie(name));
 }
