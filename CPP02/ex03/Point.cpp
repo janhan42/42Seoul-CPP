@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 10:50:00 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/30 20:22:24 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 08:20:07 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,6 @@ Point::Point(const Point& point)
 : mX(point.getX())
 , mY(point.getY())
 {}
-
-// Point -> pa=pb
-// fixed -> fa -> value
-// const 상수잖아 -> 변수를 한번 초기화하고나면 값을 못바꿔
-// Point a = ab;
-// a =b, a내부의 mx, my b mx, my
-// Fixed const x -> x라는 인스턴스는 유지
-// x.value <- int
 
 /*
 	C++ 내부 기본 세팅으로는 const 맴버 변수는 초기화 하지 않지만

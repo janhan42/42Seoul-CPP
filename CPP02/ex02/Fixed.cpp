@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 06:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/30 19:32:24 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 08:16:40 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Fixed& Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other)
-		mValue = other.getRawBits();
+		mValue = other.mValue;
 	return (*this);
 }
 
@@ -171,7 +171,7 @@ void	Fixed::setRawBits(const int raw)
 
 float	Fixed::toFloat(void) const
 {
-	return (float)mValue / (float)(mPowInt(2, mBits));
+	return (float)mValue / (float)(1 << mBits);
 }
 
 int		Fixed::toInt(void) const

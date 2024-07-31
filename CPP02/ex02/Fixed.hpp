@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 05:56:41 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/30 19:32:18 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 08:16:05 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,8 @@ class Fixed
 		const Fixed	operator--(int);					/* post-- overload */
 
 		/* Subeject Function min/max */
-		static Fixed& min(Fixed& a, Fixed& b);						/* Subject function */
-		static Fixed& max(Fixed& a, Fixed& b);						/* Subject function */
+		static Fixed& min(Fixed& a, Fixed& b);			/* Subject function */
+		static Fixed& max(Fixed& a, Fixed& b);			/* Subject function */
 
 		/* Subject Function constant min/max */
 		static const Fixed& min(const Fixed& a, const Fixed& b);	/* Subject function */
@@ -81,8 +81,8 @@ class Fixed
 		float	toFloat(void) const;					/* Subject function */
 		int		toInt(void) const;						/* Subject function */
 	private:
-		int	mValue;
-		static const int mBits = 8;
+		int	mValue;										/* integer to store the fixed-point number value */
+		static const int mBits = 8;						/* ststic constant integer to store the number of fractional bits*/
 		int	mPowInt(int base, int exponent) const;
 };
 

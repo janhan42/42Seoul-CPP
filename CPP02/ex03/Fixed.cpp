@@ -6,13 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 06:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/30 19:32:47 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 08:19:39 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed(void)
+Fixed::Fixed()
 : mValue(0)
 {}
 
@@ -24,10 +24,11 @@ Fixed::Fixed(const int num)
 : mValue(num << mBits)
 {}
 
-Fixed::Fixed(const float num) : mValue(roundf(num * mPowInt(2, mBits)))
+Fixed::Fixed(const float num)
+: mValue(roundf(num * mPowInt(2, mBits)))
 {}
 
-Fixed::~Fixed(void)
+Fixed::~Fixed()
 {}
 
 Fixed& Fixed::operator=(const Fixed &other)

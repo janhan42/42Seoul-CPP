@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 05:56:41 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/30 19:31:56 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 08:13:19 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ class Fixed
 		float	toFloat(void) const;			/* Subject function */
 		int		toInt(void) const;				/* Subject function */
 	private:
-		int	mValue;
-		static const int mBits = 8;
+		int	mValue;								/* integer to store the fixed-point number value */
+		static const int mBits = 8;				/* ststic constant integer to store the number of fractional bits*/
 		int	mPowInt(int base, int exponent) const;
 };
 

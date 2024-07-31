@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 05:56:41 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/30 19:32:40 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 08:19:20 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,45 +17,48 @@
 class Fixed
 {
 	public:
-		Fixed();								// Default constructor
-		Fixed(const Fixed& fixed);				// Copy constructor
-		Fixed(const int num);					// Int constructor [ ]
-		Fixed(const float num);					// float constructor [ ]
-		~Fixed();								// Destructor
+		Fixed();								/* Default constructor */
+		Fixed(const Fixed& fixed);				/* Copy constructor */
+		Fixed(const int num);					/* Int constructor [ ] */
+		Fixed(const float num);					/* float constructor [ ] */
+		Fixed&	operator=(const Fixed& other);	/* Copy assignment operator */
+		~Fixed();								/* Destructor */
 
-		Fixed&	operator=(const Fixed& other);	// Copy assignment operator
+		/* comparison operator overload */
+		bool	operator>(const Fixed& other) const;	/* > overload */
+		bool	operator<(const Fixed& other) const;	/* < overload */
+		bool	operator>=(const Fixed& other) const;	/* >= overload */
+		bool	operator<=(const Fixed& other) const;	/* <= overload */
+		bool	operator==(const Fixed& other) const;	/* == overload */
+		bool	operator!=(const Fixed& other) const;	/* != overload */
 
-		bool	operator>(const Fixed& other) const;
-		bool	operator<(const Fixed& other) const;
-		bool	operator>=(const Fixed& other) const;
-		bool	operator<=(const Fixed& other) const;
-		bool	operator==(const Fixed& other) const;
-		bool	operator!=(const Fixed& other) const;
+		/* arithmetic operator overload */
+		Fixed	operator+(const Fixed& other) const;	/* + overlaod */
+		Fixed	operator-(const Fixed& other) const;	/* - overload */
+		Fixed	operator*(const Fixed& other) const;	/* * overload */
+		Fixed	operator/(const Fixed& other) const;	/* / overload */
 
-		Fixed	operator+(const Fixed& other) const;
-		Fixed	operator-(const Fixed& other) const;
-		Fixed	operator*(const Fixed& other) const;
-		Fixed	operator/(const Fixed& other) const;
+		/* increment/decrement operator overload */
+		Fixed&	operator++(void);						/* pre++ overload */
+		Fixed&	operator--(void);						/* pre-- overload */
+		const Fixed	operator++(int);					/* post++ overload */
+		const Fixed	operator--(int);					/* post-- overload */
 
-		Fixed&	operator++(void);
-		Fixed&	operator--(void);
-		const Fixed	operator++(int);
-		const Fixed	operator--(int);
-
+		/* Subeject Function min/max */
 		static Fixed& min(Fixed& a, Fixed& b);
 		static Fixed& max(Fixed& a, Fixed& b);
+
+		/* Subject Function constant min/max */
 		static const Fixed& min(const Fixed& a, const Fixed& b);
 		static const Fixed& max(const Fixed& a, const Fixed& b);
 
-
-
-		int		getRawBits(void) const;
-		void	setRawBits(const int raw);
-		float	toFloat(void) const;
-		int		toInt(void) const;
+		int		getRawBits(void) const;					/* Subject function */
+		void	setRawBits(const int raw);				/* Subject function */
+		float	toFloat(void) const;					/* Subject function */
+		int		toInt(void) const;						/* Subject function */
 	private:
-		int	mValue;
-		static const int mBits = 8;
+		int	mValue;										/* integer to store the fixed-point number value */
+		static const int mBits = 8;						/* ststic constant integer to store the number of fractional bits*/
 		int	mPowInt(int base, int exponent) const;
 };
 
