@@ -6,19 +6,20 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 09:47:19 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/06 15:38:14 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/31 16:14:10 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
-ScavTrap::ScavTrap(void)
+ScavTrap::ScavTrap()
 {
 	this->mName = "<NULL>";
 	this->mHitPoint = 100;
 	this->mEnergyPoint = 50;
 	this->mAttackDamege = 20;
-	std::cout << "[Constructor] : " << this->mName << std::endl;
+	std::cout << "[ScavTrap Constructor] : " << this->mName << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string& name)
@@ -27,7 +28,7 @@ ScavTrap::ScavTrap(const std::string& name)
 	this->mHitPoint = 100;
 	this->mEnergyPoint = 50;
 	this->mAttackDamege = 20;
-	std::cout << "[Constructor] : " << this->mName << std::endl;
+	std::cout << "[ScavTrap Constructor by Name] : " << this->mName << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other)
@@ -36,22 +37,25 @@ ScavTrap::ScavTrap(const ScavTrap& other)
 	this->mHitPoint = other.mHitPoint;
 	this->mEnergyPoint = other.mEnergyPoint;
 	this->mAttackDamege = other.mAttackDamege;
-	std::cout << "[Constructor] : " << this->mName << std::endl;
+	std::cout << "[ScavTrap Copy Constructor] : " << this->mName << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap &other)
 {
-	this->mName = other.mName;
-	this->mHitPoint = other.mHitPoint;
-	this->mEnergyPoint = other.mEnergyPoint;
-	this->mAttackDamege = other.mAttackDamege;
-	std::cout << "[Constructor] : " << this->mName << std::endl;
+	if (this != &other)
+	{
+		this->mName = other.mName;
+		this->mHitPoint = other.mHitPoint;
+		this->mEnergyPoint = other.mEnergyPoint;
+		this->mAttackDamege = other.mAttackDamege;
+	}
+	std::cout << "[ScavTrap Copy Assingment Constructor] : " << this->mName << std::endl;
 	return (*this);
 }
 
-ScavTrap::~ScavTrap(void)
+ScavTrap::~ScavTrap()
 {
-	std::cout << "[Dstructor] : " << this->mName << std::endl;
+	std::cout << "[ScavTrap Dstructor] : " << this->mName << std::endl;
 }
 
 void	ScavTrap::guardGate(void)
@@ -62,7 +66,7 @@ void	ScavTrap::guardGate(void)
 		this->mEnergyPoint--;
 	}
 	else
-		std::cout << "ClapTrap " << this->mName << " can’t do anything!" << std::endl;
+		std::cout << "ScavTrap " << this->mName << " can’t do anything!" << std::endl;
 }
 
 void	ScavTrap::attack(const std::string &target)
@@ -74,5 +78,5 @@ void	ScavTrap::attack(const std::string &target)
 		this->mEnergyPoint--;
 	}
 	else
-		std::cout << "ClapTrap " << this->mName << " can’t do anything!" << std::endl;
+		std::cout << "ScavTrap " << this->mName << " can’t do anything!" << std::endl;
 }

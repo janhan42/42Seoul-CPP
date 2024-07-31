@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 08:58:57 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/06 14:14:56 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/31 15:51:51 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ClapTrap
 		virtual ~ClapTrap(void);
 
 		virtual void			attack(const std::string& target);
-		void					takeDamege(unsigned int amount);
+		void					takeDamage(unsigned int amount);
 		void					beRepaired(unsigned int amount);
 	protected:
 		std::string				mName;

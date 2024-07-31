@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 09:04:01 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/06 15:13:09 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/31 15:52:08 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	ClapTrap::attack(const std::string& target)
 		std::cout << "ClapTrap " << this->mName << " can’t do anything!" << std::endl;
 }
 
-void	ClapTrap::takeDamege(unsigned int amount)
+void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->mHitPoint < amount)
 		this->mHitPoint = 0;
