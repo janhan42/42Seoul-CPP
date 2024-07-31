@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:20:14 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/12 07:16:22 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/25 15:36:16 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,5 @@ class PhoneBook
 		void	printValue(std::string str);
 		void	printContact(int index);
 		bool	isOnlySpace(const std::string& str) const;
+		bool	isNonPrintable(const std::string& str) const;
 };

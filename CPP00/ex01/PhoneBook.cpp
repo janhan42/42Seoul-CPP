@@ -6,11 +6,12 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:23:29 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/12 07:16:19 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/25 15:40:44 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include <cctype>
 
 
 PhoneBook::PhoneBook()
@@ -35,6 +36,11 @@ void	PhoneBook::Add(void)
 			std:: cout << "contact can't have empty fields." << std::endl;
 			str = "";
 		}
+		else if (isNonPrintable(str) == true)
+		{
+			std::cout << "contact cat't have Non Printable charactor." << std::endl;
+			str = "";
+		}
 		if (str != "")
 			this->mContacts[this->mIndex].SetFirstName(str);
 	}
@@ -46,6 +52,11 @@ void	PhoneBook::Add(void)
 		if (isOnlySpace(str) == true)
 		{
 			std:: cout << "contact can't have empty fields." << std::endl;
+			str = "";
+		}
+		else if (isNonPrintable(str) == true)
+		{
+			std::cout << "contact cat't have Non Printable charactor." << std::endl;
 			str = "";
 		}
 		if (str != "")
@@ -61,6 +72,11 @@ void	PhoneBook::Add(void)
 			std:: cout << "contact can't have empty fields." << std::endl;
 			str = "";
 		}
+		else if (isNonPrintable(str) == true)
+		{
+			std::cout << "contact cat't have Non Printable charactor." << std::endl;
+			str = "";
+		}
 		if (str != "")
 			this->mContacts[this->mIndex].SetNickName(str);
 	}
@@ -74,6 +90,11 @@ void	PhoneBook::Add(void)
 			std:: cout << "contact can't have empty fields." << std::endl;
 			str = "";
 		}
+		else if (isNonPrintable(str) == true)
+		{
+			std::cout << "contact cat't have Non Printable charactor." << std::endl;
+			str = "";
+		}
 		if (str != "")
 			this->mContacts[this->mIndex].SetPhoneNumber(str);
 	}
@@ -85,6 +106,11 @@ void	PhoneBook::Add(void)
 		if (isOnlySpace(str) == true)
 		{
 			std:: cout << "contact can't have empty fields." << std::endl;
+			str = "";
+		}
+		else if (isNonPrintable(str) == true)
+		{
+			std::cout << "contact cat't have Non Printable charactor." << std::endl;
 			str = "";
 		}
 		if (str != "")
@@ -172,4 +198,16 @@ bool	PhoneBook::isOnlySpace(const std::string& str) const
 			return (false);
 	}
 	return (true);
+}
+
+bool	PhoneBook::isNonPrintable(const std::string& str) const
+{
+	int	str_len = str.size();
+
+	for (int i = 0; i < str_len; i++)
+	{
+		if (std::isprint(str[i]) == false)
+			return (true);
+	}
+	return (false);
 }

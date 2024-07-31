@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:15:09 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/03 18:58:12 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/25 15:41:28 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,27 +43,27 @@ void	Contact::SetSecret(const std::string& secret)
 	this->mSecret = secret;
 }
 
-const std::string	Contact::GetFirstName() const
+const std::string&	Contact::GetFirstName() const
 {
 	return (this->mFirstName);
 }
 
-const std::string Contact::GetLastName() const
+const std::string& Contact::GetLastName() const
 {
 	return (this->mLastName);
 }
 
-const std::string Contact::GetNickName() const
+const std::string& Contact::GetNickName() const
 {
 	return (this->mNickName);
 }
 
-const std::string Contact::GetPhoneNumber() const
+const std::string& Contact::GetPhoneNumber() const
 {
 	return (this->mPhoneNumber);
 }
 
-const std::string Contact::GetSecret() const
+const std::string& Contact::GetSecret() const
 {
 	return (this->mSecret);
 }
