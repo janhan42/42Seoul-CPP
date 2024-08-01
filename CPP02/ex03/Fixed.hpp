@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 05:56:41 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 08:19:20 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/02 08:48:50 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ class Fixed
 	private:
 		int	mValue;										/* integer to store the fixed-point number value */
 		static const int mBits = 8;						/* ststic constant integer to store the number of fractional bits*/
-		int	mPowInt(int base, int exponent) const;
 };
 
 std::ostream&	operator<<(std::ostream &str, const Fixed& fixed); // overload of the istretion (<<) operator

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 06:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 08:12:34 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/02 08:47:26 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ Fixed& Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other) // 자기 대입 방지.
-		mValue = other.getRawBits();
+		mValue = other.mValue;
 	// mBit는 static const이므로 모든 객체가 동일한 값을 가지며 대입할 필요가 없음
 	return (*this);
 }

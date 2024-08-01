@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 10:46:39 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/30 19:55:23 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/02 08:49:29 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ class Point
 		Point(const float x, const float y);		/* constructor takes as parameters two constant floating-point number */
 		Point(const Fixed x, const Fixed y);		/* My constructor takes as parameters two constant Fixed */
 		Point(const Point& point);					/* copy constructor */
-		Point& operator=(const Point& point);		/* copy assignment operator */
 		~Point();									/* destructor */
 
 		Fixed	getX(void) const;					/* Getter */
@@ -58,6 +57,7 @@ class Point
 	private:
 		const Fixed		mX;							/* const Fixed X */
 		const Fixed		mY;							/* const Fixed Y */
+		Point& operator=(const Point& point);		/* copy assignment operator */
 };
 
 bool	bsp(const Point a, const Point b, const Point c, const Point point);

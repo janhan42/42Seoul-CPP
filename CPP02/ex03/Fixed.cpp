@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 06:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 08:19:39 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/02 08:49:14 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Fixed::Fixed(const int num)
 {}
 
 Fixed::Fixed(const float num)
-: mValue(roundf(num * mPowInt(2, mBits)))
+: mValue(roundf(num * (1 << 8)))
 {}
 
 Fixed::~Fixed()
@@ -41,32 +41,32 @@ Fixed& Fixed::operator=(const Fixed &other)
 
 bool	Fixed::operator>(const Fixed& other) const
 {
-	return (getRawBits() > other.getRawBits());
+	return (mValue > other.mValue);
 }
 
 bool	Fixed::operator<(const Fixed& other) const
 {
-	return (getRawBits() < other.getRawBits());
+	return (mValue < other.mValue);
 }
 
 bool	Fixed::operator>=(const Fixed& other) const
 {
-	return (getRawBits() >= other.getRawBits());
+	return (mValue >= other.mValue);
 }
 
 bool	Fixed::operator<=(const Fixed& other) const
 {
-	return (getRawBits() <= other.getRawBits());
+	return (mValue <= other.mValue);
 }
 
 bool	Fixed::operator==(const Fixed& other) const
 {
-	return (getRawBits() == other.getRawBits());
+	return (mValue == other.mValue);
 }
 
 bool	Fixed::operator!=(const Fixed& other) const
 {
-	return (getRawBits() != other.getRawBits());
+	return (mValue != other.mValue);
 }
 
 Fixed	Fixed::operator+(const Fixed& other) const
@@ -159,7 +159,7 @@ void	Fixed::setRawBits(const int raw)
 
 float	Fixed::toFloat(void) const
 {
-	return (float)mValue / (float)(mPowInt(2, mBits));
+	return (float)mValue / (float)(1 << 8);
 }
 
 int		Fixed::toInt(void) const
@@ -171,16 +171,4 @@ int		Fixed::toInt(void) const
 std::ostream&	operator<<(std::ostream& str, const Fixed& fixed)
 {
 	return str << fixed.toFloat();
-}
-
-int	Fixed::mPowInt(int base, int exponent) const
-{
-	int	res = 1;
-	if (exponent == 0)
-		return (1);
-	else if (exponent < 0)
-		return (0);
-	for (int i = 0; i < exponent; i++)
-		res *= base;
-	return (res);
 }
