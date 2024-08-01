@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 14:53:16 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:16:45 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:17:44 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include "ScavTrap.hpp"
 
 DiamondTrap::DiamondTrap()
-
 {
 	_name = "<NULL>";
 	ClapTrap::mName = _name + "_clap_name";
