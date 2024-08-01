@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 14:20:18 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:15:24 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:35:25 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,16 @@ FragTrap::FragTrap(const FragTrap& other)
 
 FragTrap& FragTrap::operator=(const FragTrap& other)
 {
-	mName = other.mName;
-	mHitPoint = other.mHitPoint;
-	mEnergyPoint = other.mEnergyPoint;
-	mAttackDamage = other.mAttackDamage;
+	if (this != &other)
+	{
+		mName = other.mName;
+		mHitPoint = other.mHitPoint;
+		mEnergyPoint = other.mEnergyPoint;
+		mAttackDamage = other.mAttackDamage;
+	}
 	std::cout << "[FragTrap Copy Assingment Constructor] : " << mName << std::endl;
 	return (*this);
 }
-
 
 FragTrap::~FragTrap()
 {

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 09:47:19 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:15:16 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:30:41 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,13 @@ ScavTrap::ScavTrap(const ScavTrap& other)
 
 ScavTrap& ScavTrap::operator=(const ScavTrap &other)
 {
-	mName = other.mName;
-	mHitPoint = other.mHitPoint;
-	mEnergyPoint = other.mEnergyPoint;
-	mAttackDamage = other.mAttackDamage;
+	if (this != &other)
+	{
+		mName = other.mName;
+		mHitPoint = other.mHitPoint;
+		mEnergyPoint = other.mEnergyPoint;
+		mAttackDamage = other.mAttackDamage;
+	}
 	std::cout << "[ScavTrap Copy Assingment Constructor] : " << mName << std::endl;
 	return (*this);
 }

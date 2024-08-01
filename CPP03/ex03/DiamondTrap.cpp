@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 14:53:16 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:17:44 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:40:17 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,10 @@ DiamondTrap::DiamondTrap(const DiamondTrap& other)
 , ScavTrap(other)
 , FragTrap(other)
 {
-	*this = other;
+	_name = other._name;
+	mHitPoint = other.mHitPoint;
+	mEnergyPoint = other.mEnergyPoint;
+	mAttackDamage = other.mAttackDamage;
 	std::cout << "[DiamondTrap Copy Constructor] : " << _name << std::endl;
 }
 

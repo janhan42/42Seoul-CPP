@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 14:50:53 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 08:37:46 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:39:33 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 class DiamondTrap : public ScavTrap, public FragTrap
 {
 	public:
-		DiamondTrap();
-		DiamondTrap(std::string name);
-		DiamondTrap(const DiamondTrap& other);
-		DiamondTrap& operator=(const DiamondTrap& other);
-		~DiamondTrap();
+		DiamondTrap();										/* Constructor */
+		DiamondTrap(std::string name);						/* Constructor by name */
+		DiamondTrap(const DiamondTrap& other);				/* Copy Constructor */
+		DiamondTrap& operator=(const DiamondTrap& other);	/* Copy assignment Constructor */
+		~DiamondTrap();										/* Destructor */
 
 		void	whoAmI(void);
 		void	attack(const std::string& target);

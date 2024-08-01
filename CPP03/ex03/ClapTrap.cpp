@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 09:04:01 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 08:37:28 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:30:47 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ ClapTrap::ClapTrap(std::string name)
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other)
+: mName(other.mName)
+, mHitPoint(other.mHitPoint)
+, mEnergyPoint(other.mEnergyPoint)
+, mAttackDamage(other.mAttackDamage)
 {
-	mName = other.mName;
-	mHitPoint = other.mHitPoint;
-	mEnergyPoint = other.mEnergyPoint;
-	mAttackDamage = other.mAttackDamage;
 	std::cout << "[ClapTrap Copy Constructor] : " << mName << std::endl;
 }
 
