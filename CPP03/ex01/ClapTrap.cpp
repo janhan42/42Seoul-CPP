@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 09:04:01 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/31 16:12:47 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:13:47 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ClapTrap::ClapTrap()
 : mName("<NULL>")
 , mHitPoint(10)
 , mEnergyPoint(10)
-, mAttackDamege(0)
+, mAttackDamage(0)
 {
 	std::cout << "[ClapTrap Constructor] : " << mName << std::endl;
 }
@@ -25,7 +25,7 @@ ClapTrap::ClapTrap(std::string name)
 : mName(name)
 , mHitPoint(10)
 , mEnergyPoint(10)
-, mAttackDamege(0)
+, mAttackDamage(0)
 {
 	std::cout << "[ClapTrap Constructor by Name] : " << mName << std::endl;
 }
@@ -34,7 +34,7 @@ ClapTrap::ClapTrap(const ClapTrap& other)
 : mName(other.mName)
 , mHitPoint(other.mHitPoint)
 , mEnergyPoint(other.mEnergyPoint)
-, mAttackDamege(other.mAttackDamege)
+, mAttackDamage(other.mAttackDamage)
 {
 	std::cout << "[ClapTrap Copy Constructor] : " << mName << std::endl;
 }
@@ -46,7 +46,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 		mName = other.mName;
 		mHitPoint = other.mHitPoint;
 		mEnergyPoint = other.mEnergyPoint;
-		mAttackDamege = other.mAttackDamege;
+		mAttackDamage = other.mAttackDamage;
 	}
 	std::cout << "[ClapTrap Copy Assingment Constructor] : " << mName << std::endl;
 	return (*this);
@@ -62,7 +62,7 @@ void	ClapTrap::attack(const std::string& target)
 	if (mEnergyPoint > 0 && mHitPoint > 0)
 	{
 		std::cout << "ClapTrap " << mName << " attacks "
-		<< target << ", causing " << mAttackDamege << " points of damage!" << std::endl;
+		<< target << ", causing " << mAttackDamage << " points of damage!" << std::endl;
 		mEnergyPoint--;
 	}
 	else

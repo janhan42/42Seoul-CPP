@@ -6,11 +6,11 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/07/08 14:39:10 by janhan           ###   ########.fr        #
+#    Updated: 2024/08/01 09:10:00 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		FragTrap
+NAME			=		DiamondTrap
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
@@ -18,6 +18,7 @@ CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 SRCS		=	ClapTrap.cpp		\
 				ScavTrap.cpp		\
 				FragTrap.cpp		\
+				DiamondTrap.cpp		\
 				main.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 

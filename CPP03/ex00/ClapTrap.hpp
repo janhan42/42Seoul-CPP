@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 08:58:57 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/31 15:53:06 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:11:58 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 	cost 1 energy point each. Of course, ClapTrap cat't do anything if it has no hit points
 	or energy points left.
 
-	In all of these member functions, yoy have to print a meaasge to describe what hap-pens.
+	In all of these member functions, yoy have to print a message to describe what hap-pens.
 	For example, the attcak() function may display something like(of course, wihout the angle
 	brackets):
 

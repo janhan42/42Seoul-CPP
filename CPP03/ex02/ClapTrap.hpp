@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 08:58:57 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/31 15:51:44 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:14:32 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ class ClapTrap
 		std::string				mName;
 		unsigned int			mHitPoint;
 		unsigned int			mEnergyPoint;
-		unsigned int			mAttackDamege;
+		unsigned int			mAttackDamage;
 };

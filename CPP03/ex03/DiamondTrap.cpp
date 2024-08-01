@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 14:53:16 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/08 15:08:03 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:16:45 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,25 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
-DiamondTrap::DiamondTrap(void)
+DiamondTrap::DiamondTrap()
+
 {
-	this->_name = "<NULL>";
-	ClapTrap::mName ="<NULL>_clap_name";
-	this->mHitPoint = FragTrap::mHitPoint;
-	this->mEnergyPoint = 50;
-	this->mAttackDamege = FragTrap::mAttackDamege;
-	std::cout << "DiamondTrap constructor : " << this->mName << std::endl;
+	_name = "<NULL>";
+	ClapTrap::mName = _name + "_clap_name";
+	mHitPoint = FragTrap::mHitPoint;
+	mEnergyPoint = ScavTrap::mEnergyPoint;
+	mAttackDamage = FragTrap::mAttackDamage;
+	std::cout << "[DiamondTrap Constructor] : " << _name << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name)
 {
-	this->mName = name;
+	_name = name;
 	ClapTrap::mName = name + "_clap_name";
-	this->mHitPoint = FragTrap::mHitPoint;
-	this->mEnergyPoint = 50;
-	this->mAttackDamege = FragTrap::mAttackDamege;
-	std::cout << "DiamondTrap constructor : " << this->mName << std::endl;
+	mHitPoint = FragTrap::mHitPoint;
+	mEnergyPoint = ScavTrap::mEnergyPoint;
+	mAttackDamage = FragTrap::mAttackDamage;
+	std::cout << "[DiamondTrap Constructor by name] : " << _name << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& other)
@@ -41,28 +42,33 @@ DiamondTrap::DiamondTrap(const DiamondTrap& other)
 , FragTrap(other)
 {
 	*this = other;
-	std::cout << "DiamondTrap constructor : " << this->mName << std::endl;
+	std::cout << "[DiamondTrap Copy Constructor] : " << _name << std::endl;
 }
 
 DiamondTrap&	DiamondTrap::operator=(const DiamondTrap &other)
 {
-	this->_name = other._name;
-	this->mHitPoint = other.mHitPoint;
-	this->mEnergyPoint = other.mEnergyPoint;
-	this->mAttackDamege = other.mAttackDamege;
-	std::cout << "DiamondTrap constructor " << this->_name << std::endl;
+	if (this != &other)
+	{
+		_name = other._name;
+		mHitPoint = other.mHitPoint;
+		mEnergyPoint = other.mEnergyPoint;
+		mAttackDamage = other.mAttackDamage;
+	}
+	std::cout << "[DiamondTrap Copy Assignment Constructor] : " << _name << std::endl;
 	return (*this);
 }
 
-DiamondTrap::~DiamondTrap(void)
+DiamondTrap::~DiamondTrap()
 {
-	std::cout << "DiamondTrap destructor: " << this->_name << std::endl;
+	std::cout << "[DiamondTrap Destructor] : " << _name << std::endl;
 }
 
 void	DiamondTrap::whoAmI(void)
 {
-	std::cout << "DiamondTrap Name: \t" << this->_name
-			<< "\nClapTrap Name: \t" << ClapTrap::mName << std::endl;
+	std::cout << "=========WHO AM I=========" << std::endl
+	<< "DiamondTrap Name: \t" << _name
+			<< "\nClapTrap Name: \t\t" << ClapTrap::mName << std::endl
+	<< "==========================" << std::endl;
 }
 
 void	DiamondTrap::attack(const std::string &target)
@@ -74,8 +80,8 @@ void	DiamondTrap::printStatus(void)
 {
 	std::cout
 		<< "\nName:\t\t" << _name
-		<< "\nHit Point:\t" << mHitPoint
+		<< "\nHit Point:\t\t" << mHitPoint
 		<< "\nEnergy Point\t" << mEnergyPoint
-		<< "\nAttack damage:\t" << mAttackDamege
+		<< "\nAttack damage:\t" << mAttackDamage
 		<< std::endl << std::endl;
 }

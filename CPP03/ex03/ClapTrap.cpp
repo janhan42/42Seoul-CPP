@@ -6,85 +6,89 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 09:04:01 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/31 15:52:08 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 08:37:28 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void)
-: mHitPoint(10)
+ClapTrap::ClapTrap()
+
+: mName("<NULL>")
+, mHitPoint(10)
 , mEnergyPoint(10)
-, mAttackDamege(0)
+, mAttackDamage(0)
 {
-	mName = "<NULL>";
-	std::cout << "[Constructor] : " << this->mName << std::endl;
+	std::cout << "[ClapTrap Constructor] : " << mName << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
 : mName(name)
 , mHitPoint(10)
 , mEnergyPoint(10)
-, mAttackDamege(0)
+, mAttackDamage(0)
 {
-	std::cout << "[Constructor] : " << this->mName << std::endl;
+	std::cout << "[ClapTrap Constructor by Name] : " << mName << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other)
 {
-	this->mName = other.mName;
-	this->mHitPoint = other.mHitPoint;
-	this->mEnergyPoint = other.mEnergyPoint;
-	this->mAttackDamege = other.mAttackDamege;
-	std::cout << "[Constructor] : " << this->mName << std::endl;
+	mName = other.mName;
+	mHitPoint = other.mHitPoint;
+	mEnergyPoint = other.mEnergyPoint;
+	mAttackDamage = other.mAttackDamage;
+	std::cout << "[ClapTrap Copy Constructor] : " << mName << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
-	this->mName = other.mName;
-	this->mHitPoint = other.mHitPoint;
-	this->mEnergyPoint = other.mEnergyPoint;
-	this->mAttackDamege = other.mAttackDamege;
-	std::cout << "[Constructor] : " << this->mName << std::endl;
+	if (this != &other)
+	{
+		mName = other.mName;
+		mHitPoint = other.mHitPoint;
+		mEnergyPoint = other.mEnergyPoint;
+		mAttackDamage = other.mAttackDamage;
+	}
+	std::cout << "[ClapTrap Copy Assingment Constructor] : " << mName << std::endl;
 	return (*this);
 }
 
-ClapTrap::~ClapTrap(void)
+ClapTrap::~ClapTrap()
 {
-	std::cout << "[Dstructor] : " << this->mName << std::endl;
+	std::cout << "[ClapTrap Dstructor] : " << mName << std::endl;
 }
 
 void	ClapTrap::attack(const std::string& target)
 {
-	if (this->mEnergyPoint > 0 && this->mHitPoint > 0)
+	if (mEnergyPoint > 0 && mHitPoint > 0)
 	{
-		std::cout << "ClapTrap " << this->mName << " attacks "
-		<< target << ", causing " << this->mAttackDamege << " points of damage!" << std::endl;
-		this->mEnergyPoint--;
+		std::cout << "ClapTrap " << mName << " attacks "
+		<< target << ", causing " << mAttackDamage << " points of damage!" << std::endl;
+		mEnergyPoint--;
 	}
 	else
-		std::cout << "ClapTrap " << this->mName << " can’t do anything!" << std::endl;
+		std::cout << "ClapTrap " << mName << " can’t do anything!" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	if (this->mHitPoint < amount)
-		this->mHitPoint = 0;
+	if (mHitPoint < amount)
+		mHitPoint = 0;
 	else
-		this->mHitPoint -= amount;
-	std::cout << "ClapTrap " << this->mName << " has taken " << amount
-				<< " damages! " << this->mHitPoint << " HP left!" << std::endl;
+		mHitPoint -= amount;
+	std::cout << "ClapTrap " << mName << " has taken " << amount
+				<< " damages! " << mHitPoint << " HP left!" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->mEnergyPoint > 0 && this->mHitPoint > 0)
+	if (mEnergyPoint > 0 && mHitPoint > 0)
 	{
 		mHitPoint += amount;
 		mEnergyPoint--;
-		std::cout << "ClapTrap " << this->mName << " is repaired, gets HP "
-			<< amount << " and now HP is " << this->mHitPoint << std::endl;
+		std::cout << "ClapTrap " << mName << " is repaired, gets HP "
+			<< amount << " and now HP is " << mHitPoint << std::endl;
 	}
 	else
-		std::cout << "ClapTrap " << this->mName << " can’t do anything!" << std::endl;
+		std::cout << "ClapTrap " << mName << " can’t do anything!" << std::endl;
 }
