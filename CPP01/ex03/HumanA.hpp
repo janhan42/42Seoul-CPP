@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 22:51:39 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/29 11:15:47 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 11:50:07 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class HumanA
 {
 	public:
 		HumanA(const std::string& name, Weapon& weapon);	/* Constructor */
-		~HumanA(void);										/* Destructor */
+		~HumanA();											/* Destructor */
 
 		void	attack(void);								/* Subject function */
 	private:

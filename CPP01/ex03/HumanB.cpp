@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 22:59:34 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/29 11:12:34 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 11:50:22 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ HumanB::HumanB(const std::string& name)
 	std::cout << mName << " Weapon is" << "not armed" << std::endl;
 }
 
-HumanB::~HumanB(void)
+HumanB::~HumanB()
 {
 	std::cout << "Human B " << mName << " destroyed." << std::endl;
 }

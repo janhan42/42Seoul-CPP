@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 22:49:20 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/29 11:03:45 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 11:50:26 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Weapon::Weapon(const std::string& name)
 	std::cout << "Weapon " << mType << " created." << std::endl;
 }
 
-Weapon::~Weapon(void)
+Weapon::~Weapon()
 {
 	std::cout << "Weapon " << mType << " destroyed." << std::endl;
 }

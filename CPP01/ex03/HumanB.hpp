@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 22:56:25 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/29 11:16:49 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 11:50:04 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class HumanB
 {
 	public:
 		HumanB(const std::string& name);		/* Constructor */
-		~HumanB(void);							/* Destrucotr */
+		~HumanB();							/* Destrucotr */
 
 		void	attack(void);					/* Subject Function */
 		void	setWeapon(Weapon& weapon);		/* HunmanB Weapon Setter */

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 22:53:24 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/26 15:40:07 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 11:50:18 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ HumanA::HumanA(const std::string& name, Weapon& weapon)
 	std::cout << "Their wapon is : " << weapon.getType() << std::endl;
 }
 
-HumanA::~HumanA(void)
+HumanA::~HumanA()
 {
 	std::cout << "Human A " << mName << " destroyed." << std::endl;
 }

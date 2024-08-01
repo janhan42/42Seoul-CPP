@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 10:15:46 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/29 10:25:16 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 11:40:17 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Zombie::Zombie()
 Zombie::Zombie(const std::string& name)
 : mName(name)
 {
-	std::cout << "[Constructor] : " << mName << std::endl;
+	std::cout << "[Constructor by name] : " << mName << std::endl;
 }
 
 Zombie::~Zombie()
