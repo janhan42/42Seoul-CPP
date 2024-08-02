@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 06:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/02 08:49:14 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/02 09:23:25 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Fixed::Fixed(const int num)
 {}
 
 Fixed::Fixed(const float num)
-: mValue(roundf(num * (1 << 8)))
+: mValue(roundf(num * (1 << mBits)))
 {}
 
 Fixed::~Fixed()
@@ -34,7 +34,7 @@ Fixed::~Fixed()
 Fixed& Fixed::operator=(const Fixed &other)
 {
 	if (this != &other)
-		mValue = other.getRawBits();
+		mValue = other.mValue;
 	return (*this);
 }
 
@@ -159,7 +159,7 @@ void	Fixed::setRawBits(const int raw)
 
 float	Fixed::toFloat(void) const
 {
-	return (float)mValue / (float)(1 << 8);
+	return (float)mValue / (float)(1 << mBits);
 }
 
 int		Fixed::toInt(void) const

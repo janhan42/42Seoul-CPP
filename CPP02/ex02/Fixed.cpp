@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 06:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/02 08:48:41 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/02 09:22:36 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Fixed::Fixed(const int num)
 }
 
 Fixed::Fixed(const float num)
-: mValue(roundf(num * (1 << 8)))
+: mValue(roundf(num * (1 << mBits)))
 {
 	std::cout << "Float constructor called" << std::endl;
 }

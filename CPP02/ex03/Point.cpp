@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 10:50:00 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/02 08:49:23 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/02 08:59:39 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,14 @@ Point::Point(const Point& point)
 
 Point::~Point()
 {}
+
+bool	Point::operator==(const Point& other) const
+{
+	if (mX == other.mX && mY == other.mY)
+		return (true);
+	else
+		return (false);
+}
 
 Fixed	Point::getX(void) const
 {

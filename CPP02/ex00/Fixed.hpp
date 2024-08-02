@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 05:56:41 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/30 19:07:29 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/02 09:20:24 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@
 class Fixed
 {
 	public:
-		Fixed();							/* Default constructor */
-		Fixed(const Fixed& fixed);				/* copy constructor */
-		Fixed &operator=(const Fixed& other);	/* copy assignment operator overload */
-		~Fixed();							/* Destructor */
+		Fixed();								/* Default constructor */
+		Fixed(const Fixed& fixed);				/* Copy Constructor */
+		Fixed &operator=(const Fixed& other);	/* Copy Assignment Operator */
+		~Fixed();								/* Destructor */
 
 		int		getRawBits(void) const;			/* Subject function */
 		void	setRawBits(const int raw);		/* Subject function */
