@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 06:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/02 09:22:36 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/02 09:58:31 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ Fixed::Fixed()
 }
 
 Fixed::Fixed(const Fixed& fixed)
-: mValue(fixed.mValue)
 {
 	std::cout << "Copy constructor called" << std::endl;
+	*this = fixed;
 }
 
 Fixed::Fixed(const int num)
@@ -41,7 +41,7 @@ Fixed& Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other)
-		mValue = other.mValue;
+		mValue = other.getRawBits();
 	return (*this);
 }
 
@@ -52,32 +52,32 @@ Fixed::~Fixed()
 
 bool	Fixed::operator>(const Fixed& other) const
 {
-	return (mValue > other.mValue);
+	return (getRawBits() > other.getRawBits());
 }
 
 bool	Fixed::operator<(const Fixed& other) const
 {
-	return (mValue < other.mValue);
+	return (getRawBits() < other.getRawBits());
 }
 
 bool	Fixed::operator>=(const Fixed& other) const
 {
-	return (mValue >= other.mValue);
+	return (getRawBits() >= other.getRawBits());
 }
 
 bool	Fixed::operator<=(const Fixed& other) const
 {
-	return (mValue <= other.mValue);
+	return (getRawBits() <= other.getRawBits());
 }
 
 bool	Fixed::operator==(const Fixed& other) const
 {
-	return (mValue == other.mValue);
+	return (getRawBits() == other.getRawBits());
 }
 
 bool	Fixed::operator!=(const Fixed& other) const
 {
-	return (mValue != other.mValue);
+	return (getRawBits() != other.getRawBits());
 }
 
 Fixed	Fixed::operator+(const Fixed& other) const

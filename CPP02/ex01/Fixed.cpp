@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 06:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/02 09:22:51 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/02 09:56:37 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ Fixed::Fixed()
 }
 
 Fixed::Fixed(const Fixed& fixed)
-: mValue(fixed.mValue)
 {
 	std::cout << "Copy constructor called" << std::endl;
+	*this = fixed;
 }
 
 Fixed::Fixed(const int num)

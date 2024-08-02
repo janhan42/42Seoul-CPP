@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 06:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/02 09:23:25 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/02 10:01:21 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ Fixed::Fixed()
 {}
 
 Fixed::Fixed(const Fixed& fixed)
-: mValue(fixed.mValue)
-{}
+{
+	*this = fixed;
+}
 
 Fixed::Fixed(const int num)
 : mValue(num << mBits)
@@ -34,39 +35,39 @@ Fixed::~Fixed()
 Fixed& Fixed::operator=(const Fixed &other)
 {
 	if (this != &other)
-		mValue = other.mValue;
+		mValue = other.getRawBits();
 	return (*this);
 }
 
 
 bool	Fixed::operator>(const Fixed& other) const
 {
-	return (mValue > other.mValue);
+	return (getRawBits() > other.getRawBits());
 }
 
 bool	Fixed::operator<(const Fixed& other) const
 {
-	return (mValue < other.mValue);
+	return (getRawBits() < other.getRawBits());
 }
 
 bool	Fixed::operator>=(const Fixed& other) const
 {
-	return (mValue >= other.mValue);
+	return (getRawBits() >= other.getRawBits());
 }
 
 bool	Fixed::operator<=(const Fixed& other) const
 {
-	return (mValue <= other.mValue);
+	return (getRawBits() <= other.getRawBits());
 }
 
 bool	Fixed::operator==(const Fixed& other) const
 {
-	return (mValue == other.mValue);
+	return (getRawBits() == other.getRawBits());
 }
 
 bool	Fixed::operator!=(const Fixed& other) const
 {
-	return (mValue != other.mValue);
+	return (getRawBits() != other.getRawBits());
 }
 
 Fixed	Fixed::operator+(const Fixed& other) const
