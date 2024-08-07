@@ -6,14 +6,14 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/07/06 09:28:31 by janhan           ###   ########.fr        #
+#    Updated: 2024/08/06 07:24:28 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=		ClapTrap
 
 CXX				=		c++
-CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
+CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98 -Wshadow
 
 SRCS		=	ClapTrap.cpp		\
 				main.cpp

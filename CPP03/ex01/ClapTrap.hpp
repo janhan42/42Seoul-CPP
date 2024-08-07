@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 08:58:57 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:13:37 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/05 07:20:42 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ class ClapTrap
 		virtual void	attack(const std::string& target);	/* Subject attack() function */
 		void			takeDamage(unsigned int amount);	/* Subject takeDamage() function */
 		void			beRepaired(unsigned int amount);	/* Subject beRepaired() function */
+
 	protected:												/* private -> protected */
 		std::string		mName;								/* ClapTrap Name */
 		unsigned int	mHitPoint;							/* ClapTrap Hit Point */

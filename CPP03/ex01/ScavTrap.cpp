@@ -6,13 +6,14 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 09:47:19 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:14:02 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/05 07:19:12 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
+/* Constructor */
 ScavTrap::ScavTrap()
 {
 	mName = "<NULL>";
@@ -22,6 +23,7 @@ ScavTrap::ScavTrap()
 	std::cout << "[ScavTrap Constructor] : " << mName << std::endl;
 }
 
+/* Constructor by name */
 ScavTrap::ScavTrap(const std::string& name)
 {
 	mName = name;
@@ -31,6 +33,7 @@ ScavTrap::ScavTrap(const std::string& name)
 	std::cout << "[ScavTrap Constructor by name] : " << mName << std::endl;
 }
 
+/* Copy Constructor */
 ScavTrap::ScavTrap(const ScavTrap& other)
 {
 	mName = other.mName;
@@ -40,6 +43,7 @@ ScavTrap::ScavTrap(const ScavTrap& other)
 	std::cout << "[ScavTrap Copy Constructor] : " << mName << std::endl;
 }
 
+/* Copy Assignment Operator */
 ScavTrap& ScavTrap::operator=(const ScavTrap &other)
 {
 	if (this != &other)
@@ -53,6 +57,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &other)
 	return (*this);
 }
 
+/* Destructor */
 ScavTrap::~ScavTrap()
 {
 	std::cout << "[ScavTrap Dstructor] : " << mName << std::endl;

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 08:58:57 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:11:58 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/07 07:42:16 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@
 class ClapTrap
 {
 	public:
+		/* OCCF */
 		ClapTrap();											/* Constructor */
 		ClapTrap(std::string name);							/* Constructor by name */
 		ClapTrap(const ClapTrap& other);					/* Copy Constructor */

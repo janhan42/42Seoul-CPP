@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 18:21:13 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:27:18 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/07 07:40:56 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@
 	Destruction is in reverse order.
 
 	Same things for the attributes, but with different values this time:
-		- Name, which is passed as parameter to a constructor
-		- Hit points (100), represent the health of the ClapTrap
-		- Energy points (100)
+		- Name, which is passed as parameter to a cow
 		- Attcak damage (30)
 
 	FragTrap has a special capacity too:

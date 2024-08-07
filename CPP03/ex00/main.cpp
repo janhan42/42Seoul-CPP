@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 09:24:24 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/06 09:30:10 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/06 07:25:02 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,16 @@ int main(void)
 	clap1.attack("monster 1");
 	clap2.attack("monster 2");
 
-	clap1.takeDamege(5);
-	clap2.takeDamege(4);
+	clap1.takeDamage(5);
+	clap2.takeDamage(4);
 
 	clap1.beRepaired(5);
 	clap2.beRepaired(4);
 
-	clap1.takeDamege(10);
-	clap1.takeDamege(10);
-	clap2.takeDamege(10);
-	clap2.takeDamege(10);
+	clap1.takeDamage(10);
+	clap1.takeDamage(10);
+	clap2.takeDamage(10);
+	clap2.takeDamage(10);
 
 	clap1.attack("NPC");
 	clap2.attack("NPC");

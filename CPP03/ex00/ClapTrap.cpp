@@ -6,12 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 09:04:01 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:12:34 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/05 07:20:03 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+/* Constructor */
 ClapTrap::ClapTrap()
 : mName("<NULL>")
 , mHitPoint(10)
@@ -21,6 +22,7 @@ ClapTrap::ClapTrap()
 	std::cout << "[ClapTrap Constructor] : " << mName << std::endl;
 }
 
+/* Constructor by name */
 ClapTrap::ClapTrap(std::string name)
 : mName(name)
 , mHitPoint(10)
@@ -30,6 +32,7 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "[ClapTrap Constructor by Name] : " << mName << std::endl;
 }
 
+/* Copy Constructor */
 ClapTrap::ClapTrap(const ClapTrap& other)
 : mName(other.mName)
 , mHitPoint(other.mHitPoint)
@@ -39,6 +42,7 @@ ClapTrap::ClapTrap(const ClapTrap& other)
 	std::cout << "[ClapTrap Copy Constructor] : " << mName << std::endl;
 }
 
+/* Copy Assignment Operator */
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
 	if (this != &other)
@@ -52,6 +56,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 	return (*this);
 }
 
+/* Desturctor */
 ClapTrap::~ClapTrap()
 {
 	std::cout << "[ClapTrap Destructor] : " << mName << std::endl;
