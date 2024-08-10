@@ -6,13 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 22:07:42 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 10:50:29 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:41:57 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal(void)
+Animal::Animal()
 : mType("<NULL>")
 {
 	std::cout << "Animal construrtor " << mType << std::endl;
@@ -37,7 +37,7 @@ Animal& Animal::operator=(const Animal &othre)
 	return (*this);
 }
 
-Animal::~Animal(void)
+Animal::~Animal()
 {
 	std::cout << "Animal destructor " << mType << std::endl;
 }

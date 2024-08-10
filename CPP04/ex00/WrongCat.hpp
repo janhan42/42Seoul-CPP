@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:23:35 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 11:25:48 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:41:54 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 class WrongCat : public WrongAnimal
 {
 	public:
-		WrongCat(void);
+		WrongCat();
 		WrongCat(const WrongCat& other);
 		WrongCat&	operator=(const WrongCat& other);
-		~WrongCat(void);
+		~WrongCat();
 
 		void	makeSound(void) const;
 };

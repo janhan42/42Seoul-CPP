@@ -6,13 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:26:01 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 11:29:38 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:42:13 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat(void) : WrongAnimal("WrongCat")
+WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {
 	std::cout << "WrongCat default constructor " << mType << std::endl;
 }
@@ -30,7 +30,7 @@ WrongCat&	WrongCat::operator=(const WrongCat& other)
 	return (*this);
 }
 
-WrongCat::~WrongCat(void)
+WrongCat::~WrongCat()
 {
 	std::cout << "WrongCat destructor " << mType << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:29:45 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 11:38:20 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 07:24:44 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,26 +19,26 @@
 int	main(void)
 {
 	const	Animal*	meta	=	new Animal();
-	const	Animal*	j		=	new Dog();
-	const	Animal*	i		=	new Cat();
+	const	Animal*	dog		=	new Dog();
+	const	Animal*	cat		=	new Cat();
 
 	std::cout << std::endl;
 
-	std::cout << "Type is " << meta->getType() << std::endl;
-	std::cout << "Type is " << i->getType() << std::endl;
-	std::cout << "Type is " << j->getType() << std::endl;
+	std::cout << "Type Cats " << meta->getType() << std::endl;
+	std::cout << "Type is " << cat->getType() << std::endl;
+	std::cout << "Type is " << dog->getType() << std::endl;
 
 	std::cout << std::endl;
 
 	meta->makeSound();
-	j->makeSound();
-	i->makeSound();
+	dog->makeSound();
+	cat->makeSound();
 
 	std::cout << std::endl;
 
 	delete meta;
-	delete i;
-	delete j;
+	delete dog;
+	delete cat;
 
 	std::cout << "\n------------------\n" << std::endl;
 

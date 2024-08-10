@@ -6,13 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 09:24:43 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 10:50:43 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:42:05 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(void) : Animal("Dog")
+Dog::Dog() : Animal("Dog")
 {
 	std::cout << "Dog default constructor " << mType << std::endl;
 }
@@ -30,7 +30,7 @@ Dog&	Dog::operator=(const Dog& other)
 	return (*this);
 }
 
-Dog::~Dog(void)
+Dog::~Dog()
 {
 	std::cout << "Dog destructor " << mType << std::endl;
 }

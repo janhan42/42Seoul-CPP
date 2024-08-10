@@ -6,13 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:52:55 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 11:23:24 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:42:10 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal(void)
+WrongAnimal::WrongAnimal()
 : mType("<NULL>")
 {
 	std::cout << "WrongAnimal default constructor " << mType << std::endl;
@@ -37,7 +37,7 @@ WrongAnimal&	WrongAnimal::operator=(const WrongAnimal& other)
 	return (*this);
 }
 
-WrongAnimal::~WrongAnimal(void)
+WrongAnimal::~WrongAnimal()
 {
 	std::cout << "WrongAnimal destructor " << mType << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 09:20:50 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 10:44:02 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/01 09:41:44 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 class Dog : public Animal
 {
 	public:
-		Dog(void);
+		Dog();
 		Dog(const Dog& other);
 		Dog&	operator=(const Dog& othre);
-		~Dog(void);
+		~Dog();
 
 		void makeSound(void) const;
 };
