@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:42:35 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 11:57:33 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:46:55 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 class	Brain
 {
 	public:
-		Brain(void);
+		Brain();
 		Brain(const Brain& other);
 		Brain&	operator=(const Brain& other);
-		~Brain(void);
+		~Brain();
 
 		void					SetIdeaByIndex(const std::string& idea, int index);
 		const	std::string&	GetIdeaByIndex(int index) const;

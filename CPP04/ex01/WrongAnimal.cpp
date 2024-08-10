@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:52:55 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 11:23:24 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:45:00 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,17 @@ WrongAnimal::WrongAnimal(std::string type)
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& other)
+: mType(other.mType)
 {
-	mType = other.mType;
 	std::cout << "WrongAnimal copy constructor " << mType << std::endl;
 }
 
 WrongAnimal&	WrongAnimal::operator=(const WrongAnimal& other)
 {
-	mType = other.mType;
+	if (this != &other)
+	{
+		mType = other.mType;
+	}
 	std::cout << "WrongAnimal copy assignment operator " << mType << std::endl;
 	return (*this);
 }

@@ -6,13 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 19:51:53 by jeekpark          #+#    #+#             */
-/*   Updated: 2024/07/21 13:11:08 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:54:57 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-Character::Character(void)
+Character::Character()
 {
 	setName("<null>");
 	for (int i = 0; i < 4; ++i)
@@ -44,7 +44,7 @@ Character::Character(const Character& copy)
 	std::cout << "I AM " << getName() << "!" << std::endl;
 }
 
-Character::~Character(void)
+Character::~Character()
 {
 	mFloor.clearList();
 	for (int i = 0; i < 4; ++i)

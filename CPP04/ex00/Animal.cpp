@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 22:07:42 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:41:57 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:18:05 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,17 @@ Animal::Animal(std::string type)
 }
 
 Animal::Animal(const Animal& other)
+: mType(other.mType)
 {
-	mType = other.mType;
 	std::cout << "Animal copy constructor " << mType << std::endl;
 }
 
-Animal& Animal::operator=(const Animal &othre)
+Animal& Animal::operator=(const Animal &other)
 {
-	mType = othre.mType;
+	if (this != &other)
+	{
+		mType = other.mType;
+	}
 	std::cout << "Animal copy assignment operator " << mType << std::endl;
 	return (*this);
 }

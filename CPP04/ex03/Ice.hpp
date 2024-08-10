@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 08:18:19 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/21 08:27:28 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:53:40 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 class Ice : public AMateria
 {
 	public:
-					Ice(void);
+					Ice();
 					Ice(const Ice& other);
-					~Ice(void);
+					~Ice();
 		Ice&		operator=(const Ice& other);
 
 		AMateria*	clone(void) const; // subject

@@ -6,26 +6,29 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 09:24:43 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 13:07:49 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:47:52 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Brain.hpp"
 
-Dog::Dog(void) : Animal("Dog")
+Dog::Dog()
+: Animal("Dog")
 {
 	std::cout << "Dog default constructor " << mType << std::endl;
 	mBrain = new Brain();
 }
 
-Dog::Dog(const Dog& other) : Animal(other)
+Dog::Dog(const Dog& other)
+: Animal(other)
 {
 	std::cout << "Dog copy constructor " << mType << std::endl;
 	mBrain = new Brain(*other.mBrain);
 }
 
-Dog::Dog(const Brain& brain) : Animal("Dog")
+Dog::Dog(const Brain& brain)
+: Animal("Dog")
 {
 	std::cout << "Dog default(brain) constructor" << mType << std::endl;
 	mBrain = new Brain(brain);
@@ -33,13 +36,16 @@ Dog::Dog(const Brain& brain) : Animal("Dog")
 
 Dog&	Dog::operator=(const Dog& other)
 {
-	mType = other.mType;
-	*mBrain = *other.mBrain;
+	if (this != &other)
+	{
+		mType = other.mType;
+		*mBrain = *other.mBrain;
+	}
 	std::cout << "Dog assigment operator " << mType << std::endl;
 	return (*this);
 }
 
-Dog::~Dog(void)
+Dog::~Dog()
 {
 	delete mBrain;
 	std::cout << "Dog destructor " << mType << std::endl;

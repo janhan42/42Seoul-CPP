@@ -6,13 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 22:07:42 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 10:50:29 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:42:52 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal(void)
+Animal::Animal()
 : mType("<NULL>")
 {
 	std::cout << "Animal construrtor " << mType << std::endl;
@@ -25,19 +25,22 @@ Animal::Animal(std::string type)
 }
 
 Animal::Animal(const Animal& other)
+: mType(other.mType)
 {
-	mType = other.mType;
 	std::cout << "Animal copy constructor " << mType << std::endl;
 }
 
-Animal& Animal::operator=(const Animal &othre)
+Animal& Animal::operator=(const Animal &other)
 {
-	mType = othre.mType;
+	if (this != &other)
+	{
+		mType = other.mType;
+	}
 	std::cout << "Animal copy assignment operator " << mType << std::endl;
 	return (*this);
 }
 
-Animal::~Animal(void)
+Animal::~Animal()
 {
 	std::cout << "Animal destructor " << mType << std::endl;
 }

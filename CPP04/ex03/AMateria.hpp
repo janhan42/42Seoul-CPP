@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 07:11:12 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/21 12:08:16 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:50:59 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ class AMateria
 	protected:
 		std::string mType;
 	public:
-							AMateria(void);
-							AMateria(const std::string& type); // subject
-							AMateria(const AMateria& other);
-		virtual				~AMateria(void);
-		AMateria&			operator=(const AMateria& other);
+		AMateria();
+		AMateria(const std::string& type); // subject
+		AMateria(const AMateria& other);
+		virtual		~AMateria();
+		AMateria&	operator=(const AMateria& other);
 
 		const std::string&	getType(void) const;
 		virtual AMateria*	clone(void) const = 0;

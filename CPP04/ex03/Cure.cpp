@@ -6,33 +6,33 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 08:27:51 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/21 08:29:53 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:54:26 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 #include "ICharacter.hpp"
 
-Cure::Cure(void)
+Cure::Cure()
 : AMateria("Cure")
 {
-
 }
 
 Cure::Cure(const Cure& other)
 : AMateria(other)
 {
-
 }
 
-Cure::~Cure(void)
+Cure::~Cure()
 {
-
 }
 
 Cure&	Cure::operator=(const Cure& other)
 {
-	mType = other.getType();
+	if (this != &other)
+	{
+		mType = other.mType;
+	}
 	return (*this);
 }
 

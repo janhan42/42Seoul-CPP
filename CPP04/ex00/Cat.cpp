@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:44:10 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:42:20 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:18:20 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ Cat::Cat(const Cat& other)
 
 Cat&	Cat::operator=(const Cat& other)
 {
-	mType = other.mType;
+	if (this != &other)
+	{
+		mType = other.mType;
+	}
 	std::cout << "Cat assigment operator " << mType << std::endl;
 	return (*this);
 }

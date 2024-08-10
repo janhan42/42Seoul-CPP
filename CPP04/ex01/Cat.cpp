@@ -6,25 +6,28 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:44:10 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 13:05:15 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:42:37 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(void) : Animal("Cat")
+Cat::Cat()
+: Animal("Cat")
 {
 	mBrain = new Brain();
 	std::cout << "Cat default constructor " << mType << std::endl;
 }
 
-Cat::Cat(const Cat& other) : Animal(other)
+Cat::Cat(const Cat& other)
+: Animal(other)
 {
 	mBrain = new Brain(*other.mBrain);
 	std::cout << "Cat copy constructor " << mType << std::endl;
 }
 
-Cat::Cat(const Brain& brain) : Animal("Cat")
+Cat::Cat(const Brain& brain)
+: Animal("Cat")
 {
 	mBrain = new Brain(brain);
 	std::cout << "Cat default(brain) constructor" << mType << std::endl;
@@ -32,13 +35,16 @@ Cat::Cat(const Brain& brain) : Animal("Cat")
 
 Cat&	Cat::operator=(const Cat& other)
 {
-	mType = other.mType;
-	*mBrain = *other.mBrain;
+	if (this != &other)
+	{
+		mType = other.mType;
+		*mBrain = *other.mBrain;
+	}
 	std::cout << "Cat assigment operator " << mType << std::endl;
 	return (*this);
 }
 
-Cat::~Cat(void)
+Cat::~Cat()
 {
 	delete mBrain;
 	std::cout << "Cat destructor " << mType << std::endl;

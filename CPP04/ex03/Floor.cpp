@@ -6,13 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 09:47:48 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/21 13:04:37 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:54:02 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Floor.hpp"
 
-Floor::Floor(void)
+Floor::Floor()
 {
 	setHead((Node*)0);
 }
@@ -23,17 +23,17 @@ Floor::Floor(const Floor& other)
 	setHead(copyList(other.getHead()));
 }
 
-Floor::~Floor(void)
-{
-	clearList();
-}
-
 Floor&	Floor::operator=(const Floor& other)
 {
 	clearList();
 	setHead(copyList(other.getHead()));
 
 	return (*this);
+}
+
+Floor::~Floor()
+{
+	clearList();
 }
 
 Node*	Floor::getHead(void) const

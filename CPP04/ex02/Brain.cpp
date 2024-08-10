@@ -6,13 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 12:34:10 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 12:40:57 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:47:01 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
 
-Brain::Brain(void)
+Brain::Brain()
 {
 	std::cout << "Brain default constrcutor" << std::endl;
 }
@@ -31,7 +31,7 @@ Brain&	Brain::operator=(const Brain& other)
 	return (*this);
 }
 
-Brain::~Brain(void)
+Brain::~Brain()
 {
 	std::cout << "Brain destructor" << std::endl;
 }

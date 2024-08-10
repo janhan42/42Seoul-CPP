@@ -6,13 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 08:49:00 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/21 12:03:10 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:55:33 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Node.hpp"
 
-Node::Node(void)
+Node::Node()
 {
 	setContent(0);
 	setNextNode(0);
@@ -30,7 +30,7 @@ Node::Node(void* content)
 	setNextNode(0);
 }
 
-Node::~Node(void)
+Node::~Node()
 {
 
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnumal.hpp                                    :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:49:17 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 10:52:29 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:48:31 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 class WrongAnimal
 {
 	public:
-		WrongAnimal(void);
+		WrongAnimal();
 		WrongAnimal(std::string type);
 		WrongAnimal(const WrongAnimal& other);
 		WrongAnimal&	operator=(const WrongAnimal& other);
-		virtual	~WrongAnimal(void);
+		virtual	~WrongAnimal();
 
 		void	makeSound(void) const;
 		std::string	getType(void) const;

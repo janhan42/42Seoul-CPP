@@ -6,42 +6,42 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:07:25 by jeekpark          #+#    #+#             */
-/*   Updated: 2024/07/21 13:10:22 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:55:16 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria(void)
+AMateria::AMateria()
+: mType("<NULL>")
 {
-	mType = "<null>";
 }
+
 AMateria::AMateria(const std::string& type)
+: mType(type)
 {
-	mType = type;
 }
 
-AMateria::AMateria(const AMateria& copy)
+AMateria::AMateria(const AMateria& other)
+: mType(other.mType)
 {
-	mType = copy.mType;
 }
 
-AMateria::~AMateria(void)
+AMateria::~AMateria()
 {
-
 }
 
-AMateria&	AMateria::operator=(const AMateria& copy)
+AMateria&	AMateria::operator=(const AMateria& other)
 {
-	mType = copy.mType;
-	return *this;
+	if (this != &other)
+		mType = other.mType;
+	return (*this);
 }
 
 /* member function */
-
 const std::string&	AMateria::getType(void) const
 {
-	return mType;
+	return (mType);
 }
 
 void	AMateria::use(ICharacter& target)

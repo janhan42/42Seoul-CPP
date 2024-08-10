@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 08:45:08 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/21 12:45:41 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:55:27 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 class Node
 {
 	public:
-				Node(void);
+				Node();
 				Node(const Node& other);
 				Node(void* Content);
-				~Node(void);
+				~Node();
 		Node&	operator=(const Node& other);
 
 		void*	getContent(void) const;

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 08:24:29 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/21 08:27:26 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:54:07 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 class Cure : public AMateria
 {
 	public:
-					Cure(void);
+					Cure();
 					Cure(const Cure& other);
-					~Cure(void);
+					~Cure();
 		Cure&		operator=(const Cure& other);
 
 		AMateria*	clone(void) const;

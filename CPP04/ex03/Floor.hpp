@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 09:44:04 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/21 13:03:27 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:53:48 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 class Floor
 {
 	public:
-				Floor(void);
+				Floor();
 				Floor(const Floor& ohter);
-				~Floor(void);
+				~Floor();
 		Floor&	operator=(const Floor& other);
 
 		Node*	getHead(void) const;
