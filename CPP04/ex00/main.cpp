@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:29:45 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 07:24:44 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/10 15:58:01 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void)
 
 	std::cout << std::endl;
 
-	std::cout << "Type Cats " << meta->getType() << std::endl;
+	std::cout << "Type is " << meta->getType() << std::endl;
 	std::cout << "Type is " << cat->getType() << std::endl;
 	std::cout << "Type is " << dog->getType() << std::endl;
 
