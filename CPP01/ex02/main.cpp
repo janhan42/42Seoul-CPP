@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 19:24:58 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/29 10:59:05 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/07 18:45:58 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,19 +38,19 @@ int main(void)
 	/*  ==== contains ====  */
 	std::string string("HI THIS IS BRAIN");
 	std::string	*stringPTR = &string;
-	std::string &stringPEF = string;
+	std::string &stringREF = string;
 	/* ==== ========= ==== */
 
 	std::cout << "==== The memory address ====" << std::endl;
 	std::cout << "string:\t\t" << &string << std::endl;
 	std::cout << "stringPTR:\t" << stringPTR << std::endl;
-	std::cout << "stringPEF:\t" << &stringPEF << std::endl
+	std::cout << "stringREF:\t" << &stringREF << std::endl
 	<< "====     ==========     ====" << std::endl << std::endl;
 
 	std::cout << "======== The value ========" << std::endl;
 	std::cout << "string:\t\t" << string << std::endl;
 	std::cout << "stringPTR:\t" << *stringPTR << std::endl;
-	std::cout << "stringPEF:\t" << stringPEF << std::endl
+	std::cout << "stringREF:\t" << stringREF << std::endl
 	<< "====     =========     ====" << std::endl;
 
 	return (0);

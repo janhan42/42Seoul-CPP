@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:29:45 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 12:26:56 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/12 10:58:52 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 #include "Brain.hpp"
+
+void check(void)
+{
+	system("leaks Animal");
+}
 
 int main()
 {
@@ -39,6 +44,7 @@ int main()
 		delete Zoo[i];
 		std::cout << std::endl;
 	}
+	atexit(check);
 	return (0);
 }
 

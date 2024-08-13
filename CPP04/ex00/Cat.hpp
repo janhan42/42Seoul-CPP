@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:42:53 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:41:39 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/12 10:32:11 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 class Cat : public Animal
 {
 	public:
-		Cat();
-		Cat(const Cat& other);
-		Cat&	operator=(const Cat& other);
-		~Cat();
+		Cat();										/* Constructor */
+		Cat(const Cat& other);						/* Copy Constructor */
+		Cat&	operator=(const Cat& other);		/* Copy assignment Operator */
+		~Cat();										/* Destructor */
 
-		void	makeSound(void) const;
+		void	makeSound(void) const;				/* memeber function */
 };
