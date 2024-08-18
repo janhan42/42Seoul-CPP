@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 10:00:11 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 15:54:54 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:06:40 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 class Character : public ICharacter
 {
 	public:
-							Character();
-							Character(const Character& ohter);
-							Character(const std::string& name);
-							~Character();
+		Character();
+		Character(const Character& ohter);
+		Character(const std::string& name);
 		Character&			operator=(const Character& ohter);
+		~Character();
 
 		const std::string&	getName(void) const;
 		void				setName(const std::string& name);

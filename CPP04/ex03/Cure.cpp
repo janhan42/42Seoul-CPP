@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 08:27:51 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 15:54:26 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:01:19 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ICharacter.hpp"
 
 Cure::Cure()
-: AMateria("Cure")
+: AMateria("cure")
 {
 }
 

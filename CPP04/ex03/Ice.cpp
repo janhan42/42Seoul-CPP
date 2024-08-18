@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 08:20:19 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 15:53:45 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:05:47 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 #include "ICharacter.hpp"
 
 Ice::Ice()
-: AMateria("Ice")
+: AMateria("ice")
 {
-
 }
 
 Ice::Ice(const Ice& other)
 : AMateria(other)
 {
-
 }
 
 Ice::~Ice()

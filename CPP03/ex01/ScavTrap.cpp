@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 09:47:19 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/05 07:19:12 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/17 17:23:02 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ClapTrap.hpp"
 
 /* Constructor */
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() // 암시적으로 ClapTrap
 {
 	mName = "<NULL>";
 	mHitPoint = 100;

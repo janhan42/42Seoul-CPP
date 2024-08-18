@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 09:24:24 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:02:58 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/17 17:32:06 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
+
 
 
 int main(void)

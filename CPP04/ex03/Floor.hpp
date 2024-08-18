@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 09:44:04 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 15:53:48 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:01:09 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@
 class Floor
 {
 	public:
-				Floor();
-				Floor(const Floor& ohter);
-				~Floor();
+		/* OCCF */
+		Floor();
+		Floor(const Floor& ohter);
 		Floor&	operator=(const Floor& other);
+		~Floor();
 
 		Node*	getHead(void) const;
 		void	setHead(Node* head);

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 11:43:38 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/21 13:14:40 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:14:16 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,9 @@
 #include "Character.hpp"
 #include "MateriaSource.hpp"
 
-void	check(void)
-{
-	system("leaks Magic");
-}
-
 int main(void)
 {
+	/* 스킬북에 스킬추가함 */
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
@@ -32,7 +28,7 @@ int main(void)
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
-	tmp = src->createMateria("iure");
+	tmp = src->createMateria("cure");
 	me->equip(tmp);
 
 	ICharacter* bob = new Character("bob");
@@ -48,6 +44,5 @@ int main(void)
 	delete me;
 	delete src;
 
-	atexit(check);
 	return 0;
 }

@@ -6,23 +6,18 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/07/21 13:14:45 by janhan           ###   ########.fr        #
+#    Updated: 2024/08/17 09:30:07 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		Magic
+NAME			=		Bureaucart
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
 SRCS		=	main.cpp				\
-				AMateria.cpp			\
-				Ice.cpp					\
-				Cure.cpp				\
-				Character.cpp			\
-				Node.cpp				\
-				Floor.cpp				\
-				MateriaSource.cpp
+				Bureaucrat.cpp			\
+				Form.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 
