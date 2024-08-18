@@ -6,11 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:23:35 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 15:44:19 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:46:02 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
 # include "WrongAnimal.hpp"
 
@@ -24,3 +26,5 @@ class WrongCat : public WrongAnimal
 
 		void	makeSound(void) const;
 };
+
+#endif

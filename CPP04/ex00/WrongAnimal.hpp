@@ -6,11 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:49:17 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/18 13:01:51 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:58:16 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # include <string>
 # include <iostream>
@@ -18,15 +20,18 @@
 class WrongAnimal
 {
 	public:
-		WrongAnimal();											/* Constructor */
-		WrongAnimal(std::string type);							/* Constructor by type */
-		WrongAnimal(const WrongAnimal& other);					/* Copy Constructor */
-		WrongAnimal&	operator=(const WrongAnimal& other);	/* Copy Assignment operator */
-			~WrongAnimal();									/* Destructor */
+		/* OCCF */
+		WrongAnimal();
+		WrongAnimal(std::string type);
+		WrongAnimal(const WrongAnimal& other);
+		WrongAnimal&	operator=(const WrongAnimal& other);
+		~WrongAnimal();						/* Non-Virtual */
 
-		void	makeSound(void) const;							/* non virtual makeSound function */
-		std::string	getType(void) const;						/* subject getType function */
+		void	makeSound(void) const;		/* Non-Virtual */
+		std::string	getType(void) const;
 
 	protected:
 		std::string	mType;
 };
+
+#endif

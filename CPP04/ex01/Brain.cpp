@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 12:34:10 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 15:43:01 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 08:19:52 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Brain::Brain(const Brain& other)
 	std::cout << "Brain copy constructor" << std::endl;
 }
 
+/* Deep Copy */
 Brain&	Brain::operator=(const Brain& other)
 {
 	for (int i = 0; i < 100; i++)

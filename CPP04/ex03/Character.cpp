@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 19:51:53 by jeekpark          #+#    #+#             */
-/*   Updated: 2024/08/10 15:54:57 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 08:31:15 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Character::Character()
 	setName("<null>");
 	for (int i = 0; i < 4; ++i)
 		setInvenByIndex(NULL, i);
-	std::cout << "I AM " << getName() << "!" << std::endl;
+	std::cout << "* I AM " << getName() << "! *" << std::endl;
 }
 
 Character::Character(const std::string& name)
@@ -25,7 +25,7 @@ Character::Character(const std::string& name)
 	setName(name);
 	for (int i = 0; i < 4; ++i)
 		setInvenByIndex(NULL, i);
-	std::cout << "I AM " << getName() << "!" << std::endl;
+	std::cout << "* I am " << getName() << "! *" << std::endl;
 }
 
 Character::Character(const Character& copy)
@@ -100,6 +100,7 @@ void	Character::equip(AMateria* m)
 	for (int i = 0; i < 4; ++i)
 		if (getInvenByIndex(i) == NULL)
 		{
+			std::cout << "* The skill " << m->getType() << " has been equipped! *" << std::endl;
 			setInvenByIndex(m, i);
 			return ;
 		}
@@ -107,6 +108,7 @@ void	Character::equip(AMateria* m)
 
 void	Character::unequip(int idx)
 {
+	std::cout << "* The skill " << getInvenByIndex(idx)->getType() << " has been unequipped! *" << std::endl;
 	mFloor.addNodeBack(getInvenByIndex(idx));
 	setInvenByIndex(NULL, idx);
 }
@@ -118,5 +120,7 @@ void	Character::use(int idx, ICharacter& target)
 		AMateria*	temp = getInvenByIndex(idx);
 		if (temp != NULL)
 			getInvenByIndex(idx)->use(target);
+		if (temp == NULL)
+			std::cout << "* There's no skill in inventory slot " << idx << "! *" << std::endl;
 	}
 }

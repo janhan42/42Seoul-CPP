@@ -6,11 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 07:11:12 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 15:50:59 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:47:03 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef AMATERIA_HPP
+# define AMATERIA_HPP
 
 # include <string>
 # include <iostream>
@@ -31,3 +33,5 @@ class AMateria
 		virtual AMateria*	clone(void) const = 0;
 		virtual void		use(ICharacter& target);
 };
+
+#endif

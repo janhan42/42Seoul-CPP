@@ -6,11 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:42:35 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/12 10:41:16 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 08:00:14 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 # include <string>
 # include <iostream>
@@ -39,6 +41,7 @@
 class	Brain
 {
 	public:
+		/* OCCF */
 		Brain();
 		Brain(const Brain& other);
 		Brain&	operator=(const Brain& other);
@@ -50,3 +53,5 @@ class	Brain
 	private:
 		std::string	mIdeas[100];
 };
+
+#endif

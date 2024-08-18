@@ -6,11 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 08:56:48 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/19 07:07:39 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:49:30 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
 # include "AMateria.hpp"
 # include "IMateriaSource.hpp"
@@ -30,3 +32,5 @@ class MateriaSource : public IMateriaSource
 	private:
 		AMateria*	mMaterias[4];
 };
+
+#endif

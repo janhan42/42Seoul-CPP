@@ -6,11 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 09:20:50 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 15:47:32 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:43:00 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef DOG_HPP
+# define DOG_HPP
 
 # include "Animal.hpp"
 # include "Brain.hpp"
@@ -30,3 +32,5 @@ class Dog : public Animal
 	private:
 		Brain*	mBrain;
 };
+
+#endif

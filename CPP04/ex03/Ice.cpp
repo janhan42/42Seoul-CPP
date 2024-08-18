@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 08:20:19 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/19 07:05:47 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 08:22:03 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ Ice::Ice(const Ice& other)
 
 Ice::~Ice()
 {
-
 }
 
 Ice&	Ice::operator=(const Ice& other)

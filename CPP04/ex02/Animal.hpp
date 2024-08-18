@@ -6,11 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 18:33:14 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/18 16:37:04 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:41:45 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 # include <string>
 # include <iostream>
@@ -29,3 +31,5 @@ class Animal
 	protected:
 		std::string mType;
 };
+
+#endif

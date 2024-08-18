@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 11:43:38 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/19 07:14:16 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 08:23:28 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,25 @@ int main(void)
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
 
+	/* 새로운 캐릭터 생성 */
 	ICharacter* me = new Character("me");
 	AMateria* tmp;
+	/* 스킬북에서 ice 장착 */
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
+
+	/* 스킬북에서 cure 장착 */
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 
+	/* 새로운 캐릭터 생성 */
 	ICharacter* bob = new Character("bob");
+
+	/* bob에게 ice cure 사용 */
 	me->use(0, *bob);
 	me->use(1, *bob);
 
+	/* bob에게 ice 장착 */
 	bob->equip(src->createMateria("ice"));
 	bob->use(0, *me);
 	bob->unequip(0);

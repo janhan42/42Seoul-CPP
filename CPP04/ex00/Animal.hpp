@@ -6,12 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 18:33:14 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/13 18:35:25 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:59:56 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 # include <string>
 # include <iostream>
 
@@ -46,14 +47,17 @@
 class Animal
 {
 	public:
-		Animal();									/* Constructor */
-		Animal(std::string type);					/* Constructor by type */
-		Animal(const Animal& other);				/* Copy Constructor */
-		Animal&	operator=(const Animal& othre);		/* Copy Assignment Constructor */
-		virtual	~Animal();							/* Destructor */
+		/* OCCF */
+		Animal();
+		Animal(std::string type);
+		Animal(const Animal& other);
+		Animal&	operator=(const Animal& othre);
+		virtual	~Animal();
 
-		virtual void	makeSound(void) const;		/* Subject Function makeSound(void) */
-		std::string		getType(void) const;		/* Subject Function getType(void) */
+		virtual void	makeSound(void) const;
+		std::string		getType(void) const;
 	protected:
 		std::string mType;
 };
+
+#endif

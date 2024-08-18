@@ -6,17 +6,20 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:23:35 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/01 09:41:54 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:58:22 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
 # include "WrongAnimal.hpp"
 
 class WrongCat : public WrongAnimal
 {
 	public:
+		/* OCCF */
 		WrongCat();
 		WrongCat(const WrongCat& other);
 		WrongCat&	operator=(const WrongCat& other);
@@ -24,3 +27,5 @@ class WrongCat : public WrongAnimal
 
 		void	makeSound(void) const;
 };
+
+#endif

@@ -6,11 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:42:53 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 15:47:04 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:42:15 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef CAT_HPP
+# define CAT_HPP
 
 # include "Animal.hpp"
 # include "Brain.hpp"
@@ -30,3 +32,5 @@ class Cat : public Animal
 	private:
 		Brain*	mBrain;
 };
+
+#endif

@@ -6,11 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:49:17 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 15:48:31 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:45:29 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # include <string>
 # include <iostream>
@@ -30,3 +32,5 @@ class WrongAnimal
 	protected:
 		std::string	mType;
 };
+
+#endif

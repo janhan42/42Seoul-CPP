@@ -6,11 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 07:04:20 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/21 11:45:24 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:48:28 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef ICHARACTER_HPP
+# define ICHARACATER_HPP
 
 # include <string>
 
@@ -24,3 +26,5 @@ class	ICharacter
 		virtual void				unequip(int idx) = 0;
 		virtual void				use(int idx, ICharacter& target) = 0;
 };
+
+#endif

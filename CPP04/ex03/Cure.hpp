@@ -6,11 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 08:24:29 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/19 07:04:22 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:47:37 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef CURE_HPP
+# define CURE_HPP
 
 # include "AMateria.hpp"
 
@@ -26,3 +28,5 @@ class Cure : public AMateria
 		AMateria*	clone(void) const;
 		void		use(ICharacter& target);
 };
+
+#endif

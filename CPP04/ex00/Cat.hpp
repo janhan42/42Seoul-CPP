@@ -6,21 +6,26 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:42:53 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/12 10:32:11 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:59:41 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef CAT_HPP
+# define CAT_HPP
 
 # include "Animal.hpp"
 
 class Cat : public Animal
 {
 	public:
-		Cat();										/* Constructor */
-		Cat(const Cat& other);						/* Copy Constructor */
-		Cat&	operator=(const Cat& other);		/* Copy assignment Operator */
-		~Cat();										/* Destructor */
+		/* OCCF */
+		Cat();
+		Cat(const Cat& other);
+		Cat&	operator=(const Cat& other);
+		~Cat();								/* override */
 
-		void	makeSound(void) const;				/* memeber function */
+		void	makeSound(void) const;		/* override */
 };
+
+#endif

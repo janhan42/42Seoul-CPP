@@ -6,11 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 10:00:11 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/19 07:06:40 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 07:47:25 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
 # include "ICharacter.hpp"
 # include "AMateria.hpp"
@@ -39,3 +41,4 @@ class Character : public ICharacter
 		Floor				mFloor;
 };
 
+#endif
