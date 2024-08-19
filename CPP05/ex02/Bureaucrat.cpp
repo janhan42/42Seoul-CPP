@@ -1,5 +1,6 @@
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include <exception>
 
 Bureaucrat::Bureaucrat(std::string name, int grade)
 : mName(name)
@@ -62,6 +63,30 @@ void	Bureaucrat::signForm(AForm &form) const
 		std::cout << getName() << " couldn't sign " << form.getName()
 				<< " because " << getName() << "(grade: " << getGrade() << ")"
 				<< " is below the required grade(" << form.getGradeRequiredToSing() << ") to sign." << std::endl;
+	}
+}
+
+/* ex02 Function */
+void	Bureaucrat::execute(AForm& form) const
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << getName() << " execute " << form.getName() << std::endl;
+	}
+	catch(const AForm::GradeTooLowException& e)
+	{
+		std::cout << getName() << " could't execute " << form.getName()
+				 << " because " << getName() << "(grade: " << getGrade() << ") (Excute grade: "
+				 << form.getGradeRequiredToExecute() << ") to execute." << std::endl;
+	}
+	catch(const AForm::NotSignedException& e)
+	{
+		std::cout << "Failed to execute. This form is not signed." << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << "A technical problem has occurred." << std::endl;
 	}
 }
 

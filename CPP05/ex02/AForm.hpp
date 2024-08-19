@@ -31,7 +31,7 @@ class AForm
 		int					getGradeRequiredToExecute(void) const;
 
 		void				beSigned(const Bureaucrat& bureaucrat);
-		virtual void		execute(const Bureaucrat& bureaucrat) = 0;
+		virtual void		execute(const Bureaucrat& bureaucrat) const = 0;
 	private:
 		const std::string	mName;
 		bool				mSigned;					/* Sign 상태 */

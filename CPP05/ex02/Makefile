@@ -6,18 +6,21 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/08/17 09:30:07 by janhan           ###   ########.fr        #
+#    Updated: 2024/08/19 17:55:18 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		Bureaucart
+NAME			=		Bureaucrat
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	main.cpp				\
-				Bureaucrat.cpp			\
-				Form.cpp
+SRCS		=	main.cpp					\
+				Bureaucrat.cpp				\
+				AForm.cpp					\
+				PresidentialPardonForm.cpp	\
+				RobotomyRequestForm.cpp		\
+				ShrubberyCreationForm.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 

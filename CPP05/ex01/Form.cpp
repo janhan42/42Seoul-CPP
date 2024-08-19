@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 09:02:27 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/17 09:42:48 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 16:38:35 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,10 +91,12 @@ std::ostream& operator<<(std::ostream& os, const Form& rhs)
 		result = "Signed";
 	else
 		result = "Not Signed";
-	os	<< "Form Name : " << rhs.getName()
-		<< "\nSign: " << rhs.getSign()
+	os	<< "\n----- Form Info -----\n"
+		<< "AForm Name : " << rhs.getName()
+		<< "\nSign: " << result
 		<< "\nRequired grade to sign: " << rhs.getGradeRequiredToSing()
-		<< "\nRequired gread to Execute: " << rhs.getGradeRequiredToExecute();
+		<< "\nRequired gread to Execute: " << rhs.getGradeRequiredToExecute()
+		<< "\n----- ---------- -----";
 
 	return os;
 }

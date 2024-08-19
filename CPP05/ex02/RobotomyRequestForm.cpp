@@ -6,25 +6,54 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 15:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/18 15:07:37 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 12:04:59 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AForm.hpp"
-#include "RobotomyRequsetForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
-RobotomyRequsetForm::RobotomyRequsetForm(std::string target)
-: AForm("RobotomyRequsetForm", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(std::string target)
+: AForm("RobotomyRequestForm", 72, 45)
 , mTarget(target)
 {
 }
 
-RobotomyRequsetForm::RobotomyRequsetForm(const RobotomyRequsetForm& other)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& other)
 : AForm(other)
 , mTarget(other.getTarget())
 {
 }
 
-RobotomyRequsetForm::~RobotomyRequsetForm()
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& other)
 {
+	(void)other;
+	throw AForm::InvalidOperatorException();
+}
+
+RobotomyRequestForm::~RobotomyRequestForm()
+{
+}
+
+void RobotomyRequestForm::execute(const Bureaucrat& bureaucrat) const
+{
+	if (bureaucrat.getGrade() > getGradeRequiredToExecute())
+		throw AForm::GradeTooLowException();
+	if (getSign() == false)
+		throw AForm::NotSignedException();
+
+	srand(time(0));
+	if (std::rand() % 2)
+		std::cout << getTarget() << " is robot now." << std::endl;
+	else
+		std::cout << getTarget() << " is failed to be robot." << std::endl;
+}
+
+const std::string&	RobotomyRequestForm::getTarget(void) const
+{
+	return mTarget;
+}
+
+void	RobotomyRequestForm::setTarget(std::string target)
+{
+	mTarget = target;
 }

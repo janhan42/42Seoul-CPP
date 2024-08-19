@@ -28,6 +28,9 @@ class Bureaucrat
 		/* ex01 Function */
 		void				signForm(AForm& form) const;
 
+		/* ex02 Function */
+		void	execute(AForm& form) const;
+
 		/* Exception */
 		class GradeTooHighException : public std::exception {};
 		class GradeTooLowException : public std::exception {};

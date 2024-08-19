@@ -91,10 +91,12 @@ std::ostream& operator<<(std::ostream& os, const AForm& rhs)
 		result = "Signed";
 	else
 		result = "Not Signed";
-	os	<< "AForm Name : " << rhs.getName()
-		<< "\nSign: " << rhs.getSign()
+	os	<< "\n----- Form Info -----\n"
+		<< "AForm Name : " << rhs.getName()
+		<< "\nSign: " << result
 		<< "\nRequired grade to sign: " << rhs.getGradeRequiredToSing()
-		<< "\nRequired gread to Execute: " << rhs.getGradeRequiredToExecute();
+		<< "\nRequired gread to Execute: " << rhs.getGradeRequiredToExecute()
+		<< "\n----- ---------- -----";
 
 	return os;
 }
