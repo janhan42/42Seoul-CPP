@@ -6,17 +6,18 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/08/14 10:44:08 by janhan           ###   ########.fr        #
+#    Updated: 2024/07/02 06:58:59 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		phoneBook
+NAME			=		phonebook
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	PhoneBook.cpp		\
-				Contact.cpp
+SRCS		=	PhoneBook.cpp			\
+				Contact.cpp				\
+				main.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
 all : $(NAME)

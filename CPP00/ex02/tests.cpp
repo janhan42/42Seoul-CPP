@@ -12,6 +12,7 @@
 #include <functional>
 #include "Account.hpp"
 
+
 int		main( void ) {
 
 	typedef std::vector<Account::t>							  accounts_t;
@@ -20,7 +21,7 @@ int		main( void ) {
 
 	int	const				amounts[]	= { 42, 54, 957, 432, 1234, 0, 754, 16576 };
 	size_t const			amounts_size( sizeof(amounts) / sizeof(int) );
-	accounts_t				accounts( amounts, amounts + amounts_size ); // 얘는 지금 벡터야
+	accounts_t				accounts( amounts, amounts + amounts_size );
 	accounts_t::iterator	acc_begin	= accounts.begin();
 	accounts_t::iterator	acc_end		= accounts.end();
 
@@ -37,7 +38,7 @@ int		main( void ) {
 	ints_t::iterator	wit_end		= withdrawals.end();
 
 	Account::displayAccountsInfos();
-	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) ); //3번쨰인자는 맴버 함수를줘야됨 근데 레퍼러스로 케스팅해서 줘야한다.
+	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
 	for ( acc_int_t it( acc_begin, dep_begin );
 		  it.first != acc_end && it.second != dep_end;

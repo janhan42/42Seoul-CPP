@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:23:29 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/25 15:40:44 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/25 15:54:01 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,12 +118,10 @@ void	PhoneBook::Add(void)
 	}
 	if (this->mCount != 8)
 		this->mCount++;
-	this->mIndex++;
-	if (this->mIndex == 8)
-		this->mIndex = 0;
+	mIndex = (mIndex + 1 % 8);
 }
 
-void	PhoneBook::ShowContacts()
+void	PhoneBook::ShowContacts(void)
 {
 	std::cout
 			<< "┌──────────┬──────────┬──────────┬──────────┐\n"
@@ -162,11 +160,6 @@ void	PhoneBook::ShowContactByIndex(int index)
 			<< "Darkest secret:   "<< mContacts[index].GetSecret() << '\n'
 			<< "Phone number:     "<< mContacts[index].GetPhoneNumber() << '\n'
 			<< std::endl;
-}
-
-int	PhoneBook::GetCount() const
-{
-	return (this->mCount);
 }
 
 void	PhoneBook::printValue(std::string str)

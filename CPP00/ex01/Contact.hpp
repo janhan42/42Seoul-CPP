@@ -6,13 +6,15 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:08:50 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/27 18:47:20 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/25 15:59:54 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
-#include <string>
+# include <string>
 
 class Contact
 {
@@ -36,3 +38,5 @@ class Contact
 		std::string			mPhoneNumber;
 		std::string			mSecret;
 };
+
+#endif

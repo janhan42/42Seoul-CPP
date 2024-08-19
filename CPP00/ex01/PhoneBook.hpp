@@ -6,14 +6,15 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 21:20:14 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/25 15:36:16 by janhan           ###   ########.fr       */
+/*   Updated: 2024/07/25 15:59:51 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
 # include "Contact.hpp"
-
 # include <iostream>
 # include <iomanip>
 # include <cctype>
@@ -24,9 +25,8 @@ class PhoneBook
 		PhoneBook();
 		~PhoneBook();
 		void	Add(void);
-		void	ShowContacts();
+		void	ShowContacts(void);
 		void	ShowContactByIndex(int index);
-		int		GetCount() const;
 
 	private:
 		Contact	mContacts[8];
@@ -37,3 +37,5 @@ class PhoneBook
 		bool	isOnlySpace(const std::string& str) const;
 		bool	isNonPrintable(const std::string& str) const;
 };
+
+#endif
