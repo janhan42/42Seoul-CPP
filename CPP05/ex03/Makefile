@@ -6,23 +6,22 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/07/21 13:14:45 by janhan           ###   ########.fr        #
+#    Updated: 2024/08/22 18:57:57 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		Magic
+NAME			=		Bureaucrat
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	main.cpp				\
-				AMateria.cpp			\
-				Ice.cpp					\
-				Cure.cpp				\
-				Character.cpp			\
-				Node.cpp				\
-				Floor.cpp				\
-				MateriaSource.cpp
+SRCS		=	main.cpp					\
+				Bureaucrat.cpp				\
+				AForm.cpp					\
+				PresidentialPardonForm.cpp	\
+				RobotomyRequestForm.cpp		\
+				ShrubberyCreationForm.cpp	\
+				Intern.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 

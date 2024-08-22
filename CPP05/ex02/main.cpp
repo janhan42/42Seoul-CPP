@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 08:36:04 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/19 18:11:47 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/22 18:50:19 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ int main(void)
 		std::cout << std::endl;
 		unit.signForm(*paper);
 		std::cout << std::endl;
-		badUnit.execute(*paper);
+		badUnit.executeForm(*paper);
 		std::cout << std::endl;
-		unit.execute(*paper);
+		unit.executeForm(*paper);
 
 		std::cout << *paper << std::endl << std::endl;
 		std::cout << "---------------------------------" << std::endl;
@@ -67,9 +67,9 @@ int main(void)
 		std::cout << std::endl;
 		unit.signForm(*paper);
 		std::cout << std::endl;
-		badUnit.execute(*paper);
+		badUnit.executeForm(*paper);
 		std::cout << std::endl;
-		unit.execute(*paper);
+		unit.executeForm(*paper);
 		std::cout << *paper << std::endl << std::endl;
 		std::cout << "---------------------------------" << std::endl;
 		delete paper;
@@ -91,9 +91,9 @@ int main(void)
 		std::cout << std::endl;
 		unit.signForm(*paper);
 		std::cout << std::endl;
-		badUnit.execute(*paper);
+		badUnit.executeForm(*paper);
 		std::cout << std::endl;
-		unit.execute(*paper);
+		unit.executeForm(*paper);
 		std::cout << *paper << std::endl << std::endl;
 		std::cout << "---------------------------------" << std::endl;
 		delete paper;
