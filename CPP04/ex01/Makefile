@@ -6,14 +6,14 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/08/12 10:54:44 by janhan           ###   ########.fr        #
+#    Updated: 2024/08/19 09:07:32 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=		Animal
 
 CXX				=		c++
-CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98 #-Wshadow -fsanitize=address
+CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
 SRCS		=	main.cpp				\
 				Animal.cpp				\

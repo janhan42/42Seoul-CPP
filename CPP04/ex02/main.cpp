@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:29:45 by janhan            #+#    #+#             */
-/*   Updated: 2024/07/17 13:27:30 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 09:06:28 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,31 +17,23 @@
 #include "WrongCat.hpp"
 #include "Brain.hpp"
 
+void check(void)
+{
+	system("leaks Animal");
+}
+
 int main()
 {
-	Animal*	Zoo[100];
-	Brain*	brain = new Brain();
-	brain->SetIdeaByIndex("Hello", 0);
+	Animal* cat = new Cat();
+	Animal* dog = new Dog();
 
-	for (int i = 0; i < 100; i++)
-	{
-		std::cout << "Index [" << i << "]\n";
-		if (i < 50)
-			Zoo[i] = new Dog();
-		else
-			Zoo[i] = new Cat;
-		std::cout << std::endl;
-	}
+	cat->makeSound();
+	dog->makeSound();
 
+	delete cat;
+	delete dog;
 
-
-
-	for (int i = 0; i < 100; i++)
-	{
-		std::cout << "Index [" << i << "]\n";
-		delete Zoo[i];
-		std::cout << std::endl;
-	}
-	return (0);
+	atexit(check);
+	return 0;
 }
 

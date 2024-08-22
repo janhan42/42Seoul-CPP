@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 11:43:38 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/19 08:23:28 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 09:08:57 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 #include "Cure.hpp"
 #include "Character.hpp"
 #include "MateriaSource.hpp"
+
+void check(void)
+{
+	system("leaks Magic");
+}
 
 int main(void)
 {
@@ -52,5 +57,6 @@ int main(void)
 	delete me;
 	delete src;
 
+	atexit(check);
 	return 0;
 }

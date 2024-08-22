@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:29:45 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/12 10:58:52 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 09:09:26 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,34 +17,26 @@
 #include "WrongCat.hpp"
 #include "Brain.hpp"
 
-void check(void)
-{
-	system("leaks Animal");
-}
-
 int main()
 {
-	Animal*	Zoo[100];
-	Brain*	brain = new Brain();
-	brain->SetIdeaByIndex("Hello", 0);
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	delete j; // should not create a leak
+	delete i;
 
-	for (int i = 0; i < 100; i++)
-	{
-		std::cout << "Index [" << i << "]\n";
-		if (i < 50)
-			Zoo[i] = new Dog();
-		else
-			Zoo[i] = new Cat;
-		std::cout << std::endl;
-	}
+	std::cout << "\n\n\n\n" << std::endl;
 
-	for (int i = 0; i < 100; i++)
-	{
-		std::cout << "Index [" << i << "]\n";
-		delete Zoo[i];
-		std::cout << std::endl;
-	}
-	atexit(check);
-	return (0);
+	Brain* brain = new Brain();
+	brain->SetIdeaByIndex("hello", 0);
+
+	Cat	cat = Cat(*brain);
+	Dog dog = Dog(*brain);
+
+	delete brain;
+
+	std::cout << "\n\n\n" << cat.GetIdeaByIndex(0) << std::endl;
+	std::cout << dog.GetIdeaByIndex(0) << "\n\n" << std::endl;
+
+	return 0;
 }
 

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:29:45 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 15:58:01 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 09:10:16 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
+
+void check(void)
+{
+	system("leaks Animal");
+}
 
 int	main(void)
 {
@@ -60,5 +65,6 @@ int	main(void)
 	delete test;
 	delete testCat;
 
+	atexit(check);
 	return (0);
 }

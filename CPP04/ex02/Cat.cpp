@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:44:10 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/10 15:47:25 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/19 08:59:37 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,22 @@
 Cat::Cat()
 : Animal("Cat")
 {
-	mBrain = new Brain();
 	std::cout << "Cat default constructor " << mType << std::endl;
+	mBrain = new Brain();
 }
 
 Cat::Cat(const Cat& other)
 : Animal(other)
 {
-	mBrain = new Brain(*other.mBrain);
 	std::cout << "Cat copy constructor " << mType << std::endl;
+	mBrain = new Brain(*other.mBrain);
 }
 
 Cat::Cat(const Brain& brain)
 : Animal("Cat")
 {
-	mBrain = new Brain(brain);
 	std::cout << "Cat default(brain) constructor" << mType << std::endl;
+	mBrain = new Brain(brain);
 }
 
 Cat&	Cat::operator=(const Cat& other)
