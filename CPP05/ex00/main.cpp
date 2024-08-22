@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 08:36:04 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/17 08:44:45 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/23 01:56:54 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ int main(void)
 				std::cout << unit << std::endl;
 			}
 		}
+		catch(const Bureaucrat::GradeTooHighException& e)
+		{
+			std::cerr << e.what() << ": Bureaucrat Grade Too High Exception." << std::endl;
+		}
 		catch(const std::exception& e)
 		{
 			std::cerr << e.what() << std::endl;
@@ -41,6 +45,10 @@ int main(void)
 				unit.decreaseGrade();
 				std::cout << unit << std::endl;
 			}
+		}
+		catch(const Bureaucrat::GradeTooLowException& e)
+		{
+			std::cerr << e.what() << ": Bureaucart Grade Too Low Exception." << std::endl;
 		}
 		catch(const std::exception& e)
 		{

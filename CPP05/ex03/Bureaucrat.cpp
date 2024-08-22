@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/23 02:18:13 by janhan            #+#    #+#             */
+/*   Updated: 2024/08/23 02:45:32 by janhan           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 #include <exception>
@@ -10,8 +22,8 @@ Bureaucrat::Bureaucrat(std::string name, int grade)
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other)
 : mName(other.mName)
+, mGrade(other.mGrade)
 {
-	setGrade(mGrade);
 }
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat &other)
@@ -77,8 +89,8 @@ void	Bureaucrat::executeForm(AForm& form) const
 	catch(const AForm::GradeTooLowException& e)
 	{
 		std::cout << getName() << " could't execute " << form.getName()
-				 << " because " << getName() << "(grade: " << getGrade() << ") (Excute grade: "
-				 << form.getGradeRequiredToExecute() << ") to execute." << std::endl;
+				<< " because " << getName() << "(grade: " << getGrade() << ") (Excute grade: "
+				<< form.getGradeRequiredToExecute() << ") to execute." << std::endl;
 	}
 	catch(const AForm::NotSignedException& e)
 	{

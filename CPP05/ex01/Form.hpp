@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/23 02:09:33 by janhan            #+#    #+#             */
+/*   Updated: 2024/08/23 02:10:18 by janhan           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #pragma once
 #ifndef FORM_HPP
 # define FORM_HPP
@@ -38,7 +50,7 @@ class Form
 		const int			mGradeRequiredToExecute;	/* 실행하는 데 필요한 상수 등급 */
 
 		void				setIsSigned(bool flag);
-		static void			validGrade(int grade);
+		void			validGrade(int grade);
 };
 
 std::ostream&	operator<<(std::ostream& os, const Form& rhs);

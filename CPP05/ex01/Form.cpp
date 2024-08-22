@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 09:02:27 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/19 16:38:35 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/23 02:11:34 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Form::Form(std::string name, int greadRequiredToSign, int gradeRequiredToExecute
 
 Form::Form(const Form& other)
 : mName(other.mName)
-, mSigned(false)
+, mSigned(other.mSigned)
 , mGradeRequiredToSign(other.mGradeRequiredToSign)
 , mGradeRequiredToExecute(other.mGradeRequiredToExecute)
 {

@@ -1,15 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/23 01:37:39 by janhan            #+#    #+#             */
+/*   Updated: 2024/08/23 01:47:25 by janhan           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat(std::string name, int grade)
 : mName(name)
+, mGrade(grade)
 {
-	setGrade(grade);
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other)
 : mName(other.mName)
+, mGrade(other.mGrade)
 {
-	setGrade(mGrade);
 }
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat &other)
@@ -20,7 +32,6 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat &other)
 
 Bureaucrat::~Bureaucrat()
 {
-
 }
 
 const std::string&	Bureaucrat::getName() const
@@ -28,7 +39,7 @@ const std::string&	Bureaucrat::getName() const
 	return mName;
 }
 
-const int&	Bureaucrat::getGrade() const
+int	Bureaucrat::getGrade() const
 {
 	return mGrade;
 }

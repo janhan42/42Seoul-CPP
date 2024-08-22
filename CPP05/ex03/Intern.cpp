@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Intern.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/23 02:18:18 by janhan            #+#    #+#             */
+/*   Updated: 2024/08/23 03:54:20 by janhan           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Intern.hpp"
 #include <string>
 #include <sys/_types/_size_t.h>
@@ -21,7 +33,7 @@ Intern::~Intern()
 
 static AForm*	newShurubberyCreationForm(std::string target)
 {
-	return new ShurbberyCreationForm(target);
+	return new ShrubberyCreationForm(target);
 }
 
 static AForm*	newRobotomyRequestForm(std::string target)
@@ -29,12 +41,10 @@ static AForm*	newRobotomyRequestForm(std::string target)
 	return new RobotomyRequestForm(target);
 }
 
-
 static AForm*	newPresidentialPardonForm(std::string target)
 {
 	return new PresidentialPardonForm(target);
 }
-
 
 AForm*	Intern::makeForm(std::string name, std::string target)
 {

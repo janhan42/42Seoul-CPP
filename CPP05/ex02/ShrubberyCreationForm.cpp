@@ -6,35 +6,35 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 12:02:46 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/19 16:30:40 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/23 03:24:45 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShurbberyCreationForm::ShurbberyCreationForm(std::string target)
-: AForm("ShurbberyCreationForm", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
+: AForm("ShrubberyCreationForm", 145, 137)
 , mTarget(target)
 {
 }
 
-ShurbberyCreationForm::ShurbberyCreationForm(const ShurbberyCreationForm& other)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other)
 : AForm(other)
 , mTarget(other.getTarget())
 {
 }
 
-ShurbberyCreationForm& ShurbberyCreationForm::operator=(const ShurbberyCreationForm& other)
+ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other)
 {
 	(void)other;
 	throw AForm::InvalidOperatorException();
 }
 
-ShurbberyCreationForm::~ShurbberyCreationForm()
+ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 }
 
-void ShurbberyCreationForm::execute(const Bureaucrat& bureaucrat) const
+void ShrubberyCreationForm::execute(const Bureaucrat& bureaucrat) const
 {
 	if (bureaucrat.getGrade() > getGradeRequiredToExecute())
 		throw AForm::GradeTooLowException();
@@ -43,7 +43,7 @@ void ShurbberyCreationForm::execute(const Bureaucrat& bureaucrat) const
 
 	std::ofstream file((getTarget() + std::string("_shrubbery")).c_str());
 	if (file.fail())
-		throw ShurbberyCreationForm::FailedToFileOpen();
+		throw ShrubberyCreationForm::FailedToFileOpen();
 	file << "                                                         ."					<< std::endl
 		 << "                                              .         ;"						<< std::endl
 		 << "                 .              .              ;%     ;;"						<< std::endl
@@ -73,16 +73,16 @@ void ShurbberyCreationForm::execute(const Bureaucrat& bureaucrat) const
 		 << "                              ;%@@@@%%:;;;."									<< std::endl
 		 << "                          ...;%@@@@@%%:;;;;,.."								<< std::endl;
 	if (file.fail())
-		throw ShurbberyCreationForm::FailedToFileWrite();
+		throw ShrubberyCreationForm::FailedToFileWrite();
 	file.close();
 }
 
-const std::string&	ShurbberyCreationForm::getTarget(void) const
+const std::string&	ShrubberyCreationForm::getTarget(void) const
 {
 	return mTarget;
 }
 
-void	ShurbberyCreationForm::setTarget(std::string target)
+void	ShrubberyCreationForm::setTarget(std::string target)
 {
 	mTarget = target;
 }

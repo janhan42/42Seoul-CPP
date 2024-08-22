@@ -17,7 +17,7 @@ class Bureaucrat
 
 		/* Getter */
 		const std::string&	getName(void) const;
-		const int&			getGrade(void) const;
+		int					getGrade(void) const;
 
 		/* increase & decrease */
 		void				increaseGrade(void);
@@ -28,7 +28,6 @@ class Bureaucrat
 		class GradeTooLowException : public std::exception {};
 		class InvalidConstructor : public std::exception {};
 		class InvalidOperator : public std::exception {};
-
 
 	private:
 		const std::string	mName;

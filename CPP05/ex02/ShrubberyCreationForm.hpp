@@ -6,13 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 11:58:49 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/19 16:19:34 by janhan           ###   ########.fr       */
+/*   Updated: 2024/08/23 03:24:33 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef SHURBBERYCREATIONFORM_HPP
-# define SHURBBERYCREATIONFORM_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
+# define SHRUBBERYCREATIONFORM_HPP
 
 #include <fstream>
 #include <exception>
@@ -20,14 +20,14 @@
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
-class ShurbberyCreationForm : public AForm
+class ShrubberyCreationForm : public AForm
 {
 	public:
 		/* OCCF */
-		ShurbberyCreationForm(std::string target);
-		ShurbberyCreationForm(const ShurbberyCreationForm& other);
-		ShurbberyCreationForm& operator=(const ShurbberyCreationForm& other);
-		virtual ~ShurbberyCreationForm();
+		ShrubberyCreationForm(std::string target);
+		ShrubberyCreationForm(const ShrubberyCreationForm& other);
+		ShrubberyCreationForm& operator=(const ShrubberyCreationForm& other);
+		virtual ~ShrubberyCreationForm();
 
 		/* Exception */
 		class	FailedToFileOpen : public std::exception {};
