@@ -14,8 +14,8 @@
 
 Bureaucrat::Bureaucrat(std::string name, int grade)
 : mName(name)
-, mGrade(grade)
 {
+	setGrade(grade);
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other)
