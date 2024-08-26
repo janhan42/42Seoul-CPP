@@ -6,16 +6,17 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/08/23 03:58:55 by janhan           ###   ########.fr        #
+#    Updated: 2024/08/26 14:22:20 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		scalarTypes
+NAME			=		converter
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=
+SRCS		=		main.cpp		\
+					ScalarConverter.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 

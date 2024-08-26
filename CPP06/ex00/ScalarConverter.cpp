@@ -7,11 +7,17 @@
 #include <iomanip>
 #include <iostream>
 #include <limits>
+#include <stdexcept>
 
+std::string ScalarConverter::mLiteral;
 /* Public Functions */
 void	ScalarConverter::convert(const std::string &literal)
 {
 	mLiteral = literal;
+	ScalarConverter::PrintChar();
+	ScalarConverter::PrintInt();
+	ScalarConverter::PrintFloat();
+	ScalarConverter::PrintDouble();
 }
 
 void	ScalarConverter::PrintChar(void)
@@ -37,7 +43,7 @@ void	ScalarConverter::PrintChar(void)
 		&& intValue <= static_cast<int>(std::numeric_limits<char>::max()))
 		{
 			if (iscntrl(intValue) == false
-			&& (0<= intValue && intValue < 128))
+			&& (0 <= intValue && intValue < 128))
 			{
 				std::cout << '\'' << static_cast<char>(intValue) << '\'' << std::endl;
 			}
@@ -75,7 +81,122 @@ void	ScalarConverter::PrintChar(void)
 	}
 	else if (isDouble())
 	{
+		double doubleValue = std::strtod(mLiteral.c_str(), NULL);
+		if (static_cast<double>(std::numeric_limits<int>::min()) <= doubleValue
+		&& doubleValue <= static_cast<double>(std::numeric_limits<int>::max()))
+		{
+			std::cout << static_cast<int>(doubleValue) << std::endl;
+		}
+		else
+		{
+			std::cout << "impossible" << std::endl;
+		}
+	}
+	else
+	{
+		std::cout << "impossible" << std::endl;
+	}
+}
 
+void	ScalarConverter::PrintInt(void)
+{
+	std::cout << "Int: ";
+	if (isChar())
+	{
+		std::cout << static_cast<int>(mLiteral[1]) << std::endl;
+	}
+	else if (isInt())
+	{
+		std::cout << static_cast<int>(std::strtol(mLiteral.c_str(), NULL, 10)) << std::endl;
+	}
+	else if (isFloat())
+	{
+		float floatValue = static_cast<float>(std::strtod(mLiteral.c_str(), NULL));
+		if (static_cast<float>(std::numeric_limits<int>::min()) <= floatValue
+		&& floatValue <= (static_cast<float>(std::numeric_limits<int>::max())))
+		{
+			std::cout << static_cast<int>(floatValue) << std::endl;
+		}
+		else
+		{
+			std::cout << "impossible" << std::endl;
+		}
+	}
+	else if (isDouble())
+	{
+		double doubleValue = static_cast<double>(std::strtod(mLiteral.c_str(), NULL));
+		if (static_cast<double>(std::numeric_limits<int>::min()) <= doubleValue
+		&& doubleValue <= static_cast<double>(std::numeric_limits<int>::max()))
+		{
+			std::cout << static_cast<int>(doubleValue) << std::endl;
+		}
+		else
+		{
+			std::cout << "impossible" << std::endl;
+		}
+	}
+}
+
+void	ScalarConverter::PrintFloat()
+{
+	std::cout << "float: ";
+	if (isChar())
+	{
+		std::cout << std::fixed << std::setprecision(1) << static_cast<float>(mLiteral[1]) << "f" << std::endl;
+	}
+	else if (isInt())
+	{
+		std::cout << std::fixed << std::setprecision(1) << static_cast<float>(std::strtol(mLiteral.c_str(), NULL, 10)) << "f" << std::endl;
+	}
+	else if (isFloat())
+	{
+		std::cout << std::fixed << std::setprecision(std::numeric_limits<float>::digits10) << static_cast<float>(std::strtod(mLiteral.c_str(), NULL)) << "f" << std::endl;
+	}
+	else if (isDouble())
+	{
+		double doubleValue = std::strtod(mLiteral.c_str(), NULL);
+		if (-static_cast<double>(std::numeric_limits<float>::max()) <= doubleValue
+		&& doubleValue <= (static_cast<double>(std::numeric_limits<float>::max())))
+		{
+			std::cout << std::fixed << std::setprecision(std::numeric_limits<float>::digits10) << static_cast<float>(doubleValue) << "f" << std::endl;
+		}
+		else if (mLiteral == std::string("nan") || mLiteral == std::string("+inf") || mLiteral == std::string("-inf"))
+		{
+			std::cout << mLiteral << "f" << std::endl;
+		}
+		else
+		{
+			std::cout << "impossible" << std::endl;
+		}
+	}
+	else
+	{
+		std::cout << "inpossible" << std::endl;
+	}
+}
+
+void	ScalarConverter::PrintDouble()
+{
+	std::cout << "double: ";
+	if (isChar())
+	{
+		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(mLiteral[1]) << std::endl;
+	}
+	else if (isInt())
+	{
+		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(std::strtol(mLiteral.c_str(), NULL, 10)) << std::endl;
+	}
+	else if ( isFloat())
+	{
+		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(std::strtod(mLiteral.c_str(), NULL)) << std::endl;
+	}
+	else if (isDouble())
+	{
+		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(std::strtod(mLiteral.c_str(), NULL)) << std::endl;
+	}
+	else
+	{
+		std::cout << "impossible" << std::endl;
 	}
 }
 
