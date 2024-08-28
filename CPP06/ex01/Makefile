@@ -6,17 +6,17 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/08/17 08:44:08 by janhan           ###   ########.fr        #
+#    Updated: 2024/08/29 00:45:58 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		Bureaucart
+NAME			=		Serializer
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	main.cpp				\
-				Bureaucrat.cpp
+SRCS		=	main.cpp			\
+				Serializer.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 

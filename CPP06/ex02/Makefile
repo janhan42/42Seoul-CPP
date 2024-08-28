@@ -6,17 +6,16 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/08/17 08:44:08 by janhan           ###   ########.fr        #
+#    Updated: 2024/08/29 00:46:15 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		Bureaucart
+NAME			=		Identify
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	main.cpp				\
-				Bureaucrat.cpp
+SRCS		=	main.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 
