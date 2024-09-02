@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/29 00:50:15 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/02 11:34:10 by janhan           ###   ########.fr       */
+/*   Created: 2024/09/02 11:41:52 by janhan            #+#    #+#             */
+/*   Updated: 2024/09/02 11:46:52 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#ifndef WHATEVER_HPP
-# define WHATEVER_HPP
+#include <iostream>
+#include "iter.hpp"
 
-template<typename T>
-void swap(T& a, T& b)
+static void printNum(int num)
 {
-	T temp = a;
-	a = b;
-	b = temp;
+	std::cout << num << std::endl;
 }
 
-template<typename T>
-const T& min(const T& a, const T& b)
+static void printFloat(float num)
 {
-	return a < b ? a : b;
+	std::cout << num << std::endl;
 }
 
-template<typename T>
-const T& max(const T& a, const T& b)
+int main(void)
 {
-	return a > b ? a : b;
-}
+	int intArr[5] = {0, 1, 2, 3, 4};
+	iter(intArr, 5, printNum);
 
-#endif
+	float floatArr[5] = {0.1f, 0.2f, 0.3f, 0.4f, 0.5f};
+	iter(floatArr, 5, printFloat);
+
+	return 0;
+}

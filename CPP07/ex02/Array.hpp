@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/29 00:50:15 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/02 11:34:10 by janhan           ###   ########.fr       */
+/*   Created: 2023/11/06 17:03:44 by jeekpark          #+#    #+#             */
+/*   Updated: 2024/09/02 14:16:16 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef WHATEVER_HPP
-# define WHATEVER_HPP
+#ifndef ARRAY_HPP
+#define ARRAY_HPP
 
-template<typename T>
-void swap(T& a, T& b)
-{
-	T temp = a;
-	a = b;
-	b = temp;
-}
+#include <exception>
 
-template<typename T>
-const T& min(const T& a, const T& b)
+template <typename T>
+class Array
 {
-	return a < b ? a : b;
-}
+	public:
+		Array();
+		Array(const unsigned int n);
+		Array(const Array& rhs);
+		Array&	operator=(const Array& rhs);
+		~Array();
+		T&	operator[](const unsigned int i) const;
+		unsigned int	size(void) const;
 
-template<typename T>
-const T& max(const T& a, const T& b)
-{
-	return a > b ? a : b;
-}
+	private:
+		unsigned int	mLength;
+		T*				mArray;
+};
+
+#include "Array.tpp"
 
 #endif

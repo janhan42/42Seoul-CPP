@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 17:24:12 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/31 17:25:23 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/02 11:36:35 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 
 #include <cstddef>
 
-template<typename Tarry, typename Tfunction> void iter(Tarry arr, size_t length, Tfunction func)
+template<typename Tarry, typename Tfunction>
+void iter(Tarry arr, size_t length, Tfunction func)
 {
 	for (size_t i = 0; i < length; ++i)
 		func(arr[i]);
