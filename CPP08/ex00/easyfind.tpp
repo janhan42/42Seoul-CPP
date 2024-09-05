@@ -6,15 +6,15 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 17:06:21 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/02 17:30:11 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/05 17:19:14 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include <iterator>
 #ifndef EASYFIND_TPP
 # define EASYFIND_TPP
 
+#include <iterator>
 #include "easyfind.hpp"
 
 template <typename T>

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 16:26:47 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/05 16:38:21 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/05 22:28:03 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,5 @@ int main(void)
 		}
 		std::stack<int, std::list<int> > s(mstack);
 	}
-
-
+	return 0;
 }
