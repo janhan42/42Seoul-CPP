@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:57:44 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/02 14:16:17 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/04 16:39:32 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ Array<T>::~Array()
 {
 	delete [] mArray;
 }
+
 template <typename T>
 unsigned int Array<T>::size(void) const
 {

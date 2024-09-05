@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/02 11:41:52 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/04 16:31:20 by janhan           ###   ########.fr       */
+/*   Created: 2024/09/02 16:53:37 by janhan            #+#    #+#             */
+/*   Updated: 2024/09/02 17:08:22 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "iter.hpp"
+#pragma once
+#ifndef EASYFIND_HPP
+# define EASYFIND_HPP
+
+#include <algorithm>
+#include <exception>
 
 template <typename T>
-void printT(T num)
-{
-	std::cout << num << std::endl;
-}
+typename T::iterator easyfind(T& container, int i);
 
-int main(void)
-{
-	int intArr[5] = {0, 1, 2, 3, 4};
-	iter(intArr, 5, printT<int>);
+#include "easyfind.tpp"
 
-	float floatArr[5] = {0.1f, 0.2f, 0.3f, 0.4f, 0.5f};
-	iter(floatArr, 5, printT<float>);
-
-	return 0;
-}
+#endif
