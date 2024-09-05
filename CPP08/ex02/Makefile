@@ -6,11 +6,11 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/08/31 17:23:21 by janhan           ###   ########.fr        #
+#    Updated: 2024/09/05 16:31:52 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		whatever
+NAME			=		mutantstack
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
