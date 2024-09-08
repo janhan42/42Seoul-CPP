@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 02:17:40 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/23 02:17:40 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 10:25:43 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,22 @@ class Bureaucrat
 		void	executeForm(AForm& form) const;
 
 		/* Exception */
-		class GradeTooHighException : public std::exception {};
-		class GradeTooLowException : public std::exception {};
-		class InvalidConstructor : public std::exception {};
-		class InvalidOperator : public std::exception {};
+		class GradeTooHighException : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class GradeTooLowException : public std::exception {
+			public:
+				virtual const char *what(void) const throw();
+		};
+		class InvalidConstructor : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class InvalidOperator : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
 
 
 	private:

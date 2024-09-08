@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 01:37:39 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/08 09:46:41 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 10:23:15 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,25 @@ std::ostream&	operator<<(std::ostream& os, Bureaucrat& rhs)
 {
 	os << rhs.getName() << ", bureaucrat grade " << rhs.getGrade() << ".";
 	return os;
+}
+
+/* Excpetion */
+const char* Bureaucrat::GradeTooHighException::what(void) const throw()
+{
+	return "Bureaucrat Grade Too High Exception";
+}
+
+const char* Bureaucrat::GradeTooLowException::what(void) const throw()
+{
+	return "Bureaucrat Grade Too Low Exception";
+}
+
+const char* Bureaucrat::InvalidOperator::what(void) const throw()
+{
+	return "Bureaucrat InvalidOperator Exception";
+}
+
+const char* Bureaucrat::InvalidConstructor::what(void) const throw()
+{
+	return "Bureaucrat Invalid Contructor Exception";
 }

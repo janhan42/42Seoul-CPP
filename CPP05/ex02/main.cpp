@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 08:36:04 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/08 09:56:15 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 10:37:25 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main(void)
 		unit.executeForm(*paper);
 
 		std::cout << *paper << std::endl << std::endl;
-		std::cout << "---------------------------------" << std::endl;
+		std::cout << "---------------------------------" << std::endl << std::endl;
 		delete paper;
 	}
 
@@ -71,7 +71,7 @@ int main(void)
 		std::cout << std::endl;
 		unit.executeForm(*paper);
 		std::cout << *paper << std::endl << std::endl;
-		std::cout << "---------------------------------" << std::endl;
+		std::cout << "---------------------------------" << std::endl << std::endl;
 		delete paper;
 	}
 

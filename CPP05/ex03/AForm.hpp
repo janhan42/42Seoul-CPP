@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 02:18:07 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/23 02:18:07 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 10:38:07 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,26 @@ class AForm
 		virtual ~AForm();
 
 		/* Exception */
-		class	GradeTooHighException : public std::exception {};
-		class	GradeTooLowException : public std::exception {};
-		class	InvalidOperatorException : public std::exception {};
-		class	DoubleSignException : public std::exception {};
-		class	NotSignedException : public std::exception {};
+		class	GradeTooHighException : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class	GradeTooLowException : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class	InvalidOperatorException : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class	DoubleSignException : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class	NotSignedException : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
 
 		/* Functions */
 		const std::string&	getName(void) const;

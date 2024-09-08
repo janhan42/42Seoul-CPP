@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 09:02:27 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/08 09:53:51 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 10:32:51 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,4 +99,25 @@ std::ostream& operator<<(std::ostream& os, const Form& rhs)
 		<< "\n----- ---------- -----";
 
 	return os;
+}
+
+/* Exception */
+const char*	Form::GradeTooHighException::what(void) const throw()
+{
+	return "Form Grade Too High Exception";
+}
+
+const char* Form::GradeTooLowException::what(void) const throw()
+{
+	return "Form Grade Too Low Exception";
+}
+
+const char* Form::InvalidOperatorException::what(void) const throw()
+{
+	return "Form Invalid Operator Exception";
+}
+
+const char* Form::DoubleSignException::what(void) const throw()
+{
+	return "Form DoubleSign Exception";
 }

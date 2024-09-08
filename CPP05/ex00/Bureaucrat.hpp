@@ -24,10 +24,22 @@ class Bureaucrat
 		void				decreaseGrade(void);
 
 		/* Exception */
-		class GradeTooHighException : public std::exception {};
-		class GradeTooLowException : public std::exception {};
-		class InvalidConstructor : public std::exception {};
-		class InvalidOperator : public std::exception {};
+		class GradeTooHighException : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class GradeTooLowException : public std::exception {
+			public:
+				virtual const char *what(void) const throw();
+		};
+		class InvalidConstructor : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class InvalidOperator : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
 
 	private:
 		const std::string	mName;

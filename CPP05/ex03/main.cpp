@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 18:40:15 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/08 09:59:45 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 10:40:54 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int main()
 		}
 		catch (const Intern::TypeNotFound& e)
 		{
-			std::cerr << "SomeThig Worng : Check form Name" << std::endl;
+			std::cerr << e.what() << std::endl;
 		}
 		delete WrongForm;
 	}

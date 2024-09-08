@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 02:18:18 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/08 10:04:52 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 10:41:02 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,3 +74,8 @@ AForm*	Intern::makeForm(std::string name, std::string target)
 	return (AForm*)0;
 }
 
+/* Exception */
+const char* Intern::TypeNotFound::what(void) const throw()
+{
+	return "Type Not Found Exception";
+}

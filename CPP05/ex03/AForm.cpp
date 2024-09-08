@@ -100,3 +100,29 @@ std::ostream& operator<<(std::ostream& os, const AForm& rhs)
 
 	return os;
 }
+
+/* Exception */
+const char*	AForm::GradeTooHighException::what(void) const throw()
+{
+	return "AForm Grade Too High Exception";
+}
+
+const char* AForm::GradeTooLowException::what(void) const throw()
+{
+	return "AForm Grade Too Low Exception";
+}
+
+const char* AForm::InvalidOperatorException::what(void) const throw()
+{
+	return "AForm Invalid Operator Exception";
+}
+
+const char* AForm::DoubleSignException::what(void) const throw()
+{
+	return "AForm DoubleSign Exception";
+}
+
+const char* AForm::NotSignedException::what(void) const throw()
+{
+	return "AForm Not Signed Exception";
+}

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 02:09:33 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/08 09:53:56 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 10:27:41 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,22 @@ class Form
 		~Form();
 
 		/* Exception */
-		class	GradeTooHighException : public std::exception {};
-		class	GradeTooLowException : public std::exception {};
-		class	InvalidOperatorException : public std::exception {};
-		class	DoubleSignException : public std::exception {};
+		class	GradeTooHighException : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class	GradeTooLowException : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class	InvalidOperatorException : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class	DoubleSignException : public std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
 
 		/* Functions */
 		const std::string&	getName(void) const;
@@ -45,9 +57,9 @@ class Form
 
 	private:
 		const std::string	mName;
-		bool				mSigned;					/* Sign 상태 */
-		const int			mGradeRequiredToSign;		/* 서명하는 데 필요한 상수 등급 */
-		const int			mGradeRequiredToExecute;	/* 실행하는 데 필요한 상수 등급 */
+		bool				mSigned;
+		const int			mGradeRequiredToSign;
+		const int			mGradeRequiredToExecute;
 
 		void				setIsSigned(bool flag);
 		void				validGrade(int grade);

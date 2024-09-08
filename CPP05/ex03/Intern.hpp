@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 02:18:16 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/23 02:18:16 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 10:39:03 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ class Intern
 		Intern& operator=(const Intern& rhs);
 		~Intern();
 
-		class	 TypeNotFound : std::exception {};
+		class	 TypeNotFound : std::exception {
+			public:
+				virtual const char* what(void) const throw();
+		};
 
 		AForm* makeForm(std::string name, std::string target);
 };
