@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 18:40:15 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/22 18:58:27 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 09:59:45 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,6 @@
 #include "Bureaucrat.hpp"
 #include "Intern.hpp"
 #include <exception>
-
-void	check(void)
-{
-	system("leaks Bureaucrat");
-}
 
 int main()
 {
@@ -54,10 +49,9 @@ int main()
 		}
 		catch (const Intern::TypeNotFound& e)
 		{
-			std::cerr << "SomeThig Worng" << std::endl;
+			std::cerr << "SomeThig Worng : Check form Name" << std::endl;
 		}
 		delete WrongForm;
 	}
-	atexit(check);
 	return (0);
 }

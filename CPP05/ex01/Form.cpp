@@ -6,16 +6,16 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 09:02:27 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/23 02:11:34 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 09:53:51 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(std::string name, int greadRequiredToSign, int gradeRequiredToExecute)
+Form::Form(std::string name, int gradeRequiredToSign, int gradeRequiredToExecute)
 : mName(name)
 , mSigned(false)
-, mGradeRequiredToSign(greadRequiredToSign)
+, mGradeRequiredToSign(gradeRequiredToSign)
 , mGradeRequiredToExecute(gradeRequiredToExecute)
 {
 	validGrade(mGradeRequiredToSign);

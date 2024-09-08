@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 02:18:18 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/23 03:54:20 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 10:04:52 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ AForm*	Intern::makeForm(std::string name, std::string target)
 			return f[i](target);
 		}
 	}
+	std::cerr << "Error: " << name << " Not Found !" << std::endl;
 	throw Intern::TypeNotFound();
 	return (AForm*)0;
 }

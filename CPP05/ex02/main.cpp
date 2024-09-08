@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 08:36:04 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/22 18:50:19 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 09:56:15 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main(void)
 		Bureaucrat	badUnit2("Bad Execute", 136);
 		Bureaucrat	unit("Janhan", 7);
 
-		AForm*		paper = new ShurbberyCreationForm("home");
+		AForm*		paper = new ShrubberyCreationForm("home");
 
 		badUnit.signForm(*paper);
 		std::cout << std::endl;

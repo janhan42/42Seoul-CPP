@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 15:05:23 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/19 12:04:59 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 09:57:44 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void RobotomyRequestForm::execute(const Bureaucrat& bureaucrat) const
 		throw AForm::GradeTooLowException();
 	if (getSign() == false)
 		throw AForm::NotSignedException();
-
+	std::cout << "drill!!!!!!!!!!!!!!!!!!!!!!!" << std::endl;
 	srand(time(0));
 	if (std::rand() % 2)
 		std::cout << getTarget() << " is robot now." << std::endl;

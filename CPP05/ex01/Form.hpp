@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 02:09:33 by janhan            #+#    #+#             */
-/*   Updated: 2024/08/23 02:10:18 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/08 09:53:56 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Form
 {
 	public:
 		/* OCCF */
-		Form(std::string name, int greadRequiredToSign, int gradeRequiredToExecute);
+		Form(std::string name, int gradeRequiredToSign, int gradeRequiredToExecute);
 		Form(const Form& other);
 		Form& operator=(const Form& other);
 		~Form();
@@ -50,7 +50,7 @@ class Form
 		const int			mGradeRequiredToExecute;	/* 실행하는 데 필요한 상수 등급 */
 
 		void				setIsSigned(bool flag);
-		void			validGrade(int grade);
+		void				validGrade(int grade);
 };
 
 std::ostream&	operator<<(std::ostream& os, const Form& rhs);
