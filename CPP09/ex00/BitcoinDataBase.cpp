@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BitcointDataBase.cpp                               :+:      :+:    :+:   */
+/*   BitcoinDataBase.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 06:19:49 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/08 09:19:01 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/09 08:48:27 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BitcointDataBase.hpp"
+#include "BitcoinDataBase.hpp"
 #include <limits>
 
 /* OCCF */
@@ -27,6 +27,9 @@ BitcoinDataBase& BitcoinDataBase::operator=(const BitcoinDataBase &rhs)
 		setDataBase(rhs.getDataBase());
 	return (*this);
 }
+
+BitcoinDataBase::~BitcoinDataBase()
+{}
 
 float	BitcoinDataBase::getExcangeRateByDate(const std::string &date)
 {

@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 09:07:05 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/08 09:12:12 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/09 08:37:08 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 #include "split.hpp"
 #include "isDateFormat.hpp"
-#include "BitcointDataBase.hpp"
+#include "BitcoinDataBase.hpp"
 
 class BitcoinExchange
 {
@@ -35,7 +35,7 @@ class BitcoinExchange
 
 		void		importDataBase(const std::string& dataBaseFilePath);
 		void		exchange(const std::string& inputFIlePath);
-
+		const		std::list<std::string>& getExchangeResult(void) const;
 		class InvalidInputException : public std::exception
 		{
 			public:

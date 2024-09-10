@@ -6,7 +6,7 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/09/06 14:49:04 by janhan           ###   ########.fr        #
+#    Updated: 2024/09/09 08:37:35 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,11 @@ NAME			=		btc
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=		main.cpp
+SRCS		=		main.cpp			\
+					BitcoinExchange.cpp	\
+					BitcoinDataBase.cpp	\
+					isDateFormat.cpp	\
+					split.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 
