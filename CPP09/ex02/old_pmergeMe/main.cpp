@@ -5,27 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/04 07:27:47 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/23 12:29:49 by janhan           ###   ########.fr       */
+/*   Created: 2024/09/14 07:34:54 by janhan            #+#    #+#             */
+/*   Updated: 2024/09/14 07:35:49 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "whatever.hpp"
+#include "PmergeMe.hpp"
 
-int main( void )
+int main(const int ac, const char** av)
 {
-	int a = 2;
-	int b = 3;
-	::swap( a, b );
-	std::cout << "a = " << a << ", b = " << b << std::endl;
-	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-	std::string c = "chaine1";
-	std::string d = "chaine2";
-	::swap(c, d);
-	std::cout << "c = " << c << ", d = " << d << std::endl;
-	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
-	return 0;
+	PmergeMe ford(ac, av);
+	return ford.run() ? 0 : 1;
 }

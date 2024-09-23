@@ -36,6 +36,7 @@ int main(int, char**)
 			return 1;
 		}
 	}
+	/* 잘못된 인덱스 범위 */
 	try
 	{
 		numbers[-2] = 0;
@@ -52,6 +53,7 @@ int main(int, char**)
 	{
 		std::cerr << e.what() << '\n';
 	}
+	/*  */
 
 	for (int i = 0; i < MAX_VAL; i++)
 	{

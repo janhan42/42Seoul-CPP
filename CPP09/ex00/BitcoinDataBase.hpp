@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 06:05:51 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/09 08:45:34 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/23 10:15:28 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,7 @@ class BitcoinDataBase
 				virtual const char* what(void) const throw();
 		};
 	private:
-		typedef std::map<std::string, float, std::less<std::string>,
-		std::allocator<std::pair<const std::string, float> > >
-			MapT;
+		typedef std::map<std::string, float, std::less<std::string>, std::allocator<std::pair<const std::string, float> > > MapT;
 
 		BitcoinDataBase::MapT			mDataBase;
 

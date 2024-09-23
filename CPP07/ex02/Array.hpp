@@ -6,15 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:03:44 by jeekpark          #+#    #+#             */
-/*   Updated: 2024/09/02 14:16:16 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/23 12:42:16 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
-
-#include <exception>
 
 template <typename T>
 class Array

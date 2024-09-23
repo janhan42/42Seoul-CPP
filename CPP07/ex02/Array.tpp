@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:57:44 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/04 16:39:32 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/23 13:36:11 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,18 @@
 #include <exception>
 #include "Array.hpp"
 
+/*
+	매개 변수 없는 빈 생성자의 경우 mLength를 0로 지정 mArray를 new T[mLength]
+로 생성 */
 template <typename T>
 Array<T>::Array()
 : mLength(0)
 , mArray(new T[mLength])
 {}
 
+/*
+
+ */
 template <typename T>
 Array<T>::Array(const unsigned int n)
 : mLength(n)

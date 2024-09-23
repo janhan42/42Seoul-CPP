@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 08:37:57 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/09 08:44:01 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/23 10:09:36 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(int ac, char** av)
 		exc.exchange(std::string(av[1]));
 		for (std::list<std::string>::const_iterator it = exc.getExchangeResult().begin();
 			it != exc.getExchangeResult().end(); ++it)
-			std::cout << *it << '\n';
+		std::cout << *it << '\n';
 	}
 	catch (const std::exception& e)
 	{

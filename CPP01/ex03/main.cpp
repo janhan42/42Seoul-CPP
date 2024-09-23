@@ -6,12 +6,13 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 23:02:16 by janhan            #+#    #+#             */
-/*   Updated: 2024/06/14 23:06:26 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/21 14:47:20 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 #include "HumanB.hpp"
+#include "Weapon.hpp"
 
 int main()
 {

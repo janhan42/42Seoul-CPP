@@ -6,16 +6,17 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/09/02 17:29:51 by janhan           ###   ########.fr        #
+#    Updated: 2024/09/14 07:37:59 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=		easyfind
+NAME			=		PmergeMe
 
 CXX				=		c++
 CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
 
-SRCS		=		main.cpp
+SRCS		=		main.cpp			\
+					PmergeMe.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 
