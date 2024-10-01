@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 00:01:39 by janhan            #+#    #+#             */
-/*   Updated: 2024/10/02 06:59:15 by janhan           ###   ########.fr       */
+/*   Updated: 2024/10/02 07:32:00 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,21 +110,16 @@ void	PmergeMe::sort(std::deque<size_t>& sequnceDeque)
 		std::cout << *it << " ";
 	}
 	std::cout << std::endl;
-	/* End */
 
+	// 승자와 패자의 위치 변경 및 [a1] = [b1] 형식으로 체이닝
 	for (size_t i = 0; i < half; ++i)
 	{
 		if (sequnceDeque[i] < sequnceDeque[i + half])
 			std::swap(sequnceDeque[i], sequnceDeque[i + half]);
-		nord[sequnceDeque[i]].push_back(sequnceDeque[i + half]); // b그룹을 저장함
-		// sequnceDeque[0](14) vs. sequnceDeque[6](3): 14 > 3이므로 스왑하지 않음. nord[14]에 3을 저장.
-		// sequnceDeque[1](7) vs. sequnceDeque[7](1): 7 > 1이므로 스왑하지 않음. nord[7]에 1을 저장.
-		// sequnceDeque[2](14) vs. sequnceDeque[8](6): 14 > 6이므로 스왑하지 않음. nord[14]에 6을 저장.
-		// sequnceDeque[3](20) vs. sequnceDeque[9](6): 20 > 6이므로 스왑하지 않음. nord[20]에 6을 저장.
-		// sequnceDeque[4](16) vs. sequnceDeque[10](3): 16 > 3이므로 스왑하지 않음. nord[16]에 3을 저장.
-		// sequnceDeque[5](20) vs. sequnceDeque[11](20): 같으므로 스왑하지 않음. nord[20]에 20을 저장.
+		nord[sequnceDeque[i]].push_back(sequnceDeque[i + half]);
 	}
 
+	// 승자 절반 그룹을 firstHalf로 생성
 	std::deque<size_t> firstHalf(sequnceDeque.begin(), sequnceDeque.begin() + half);
 
 	/* TEST Output */
@@ -142,6 +137,7 @@ void	PmergeMe::sort(std::deque<size_t>& sequnceDeque)
 	std::cout << std::endl << std::endl;
 	/* End */
 
+	// 승자 그룹으로 sort재귀
 	sort(firstHalf);
 
 	/* TEST Output */
@@ -152,7 +148,7 @@ void	PmergeMe::sort(std::deque<size_t>& sequnceDeque)
 	}
 	std::cout << std::endl;
 	/* End */
-	// std::copy(firstHalf.begin(), firstHalf.end(), sequnceDeque.begin());
+	std::copy(firstHalf.begin(), firstHalf.end(), sequnceDeque.begin());
 
 	/* TEST Output */
 	std::cout << "sort After firstHalf ";
@@ -169,41 +165,58 @@ void	PmergeMe::sort(std::deque<size_t>& sequnceDeque)
 	std::cout << std::endl << "-------------------------" << std::endl;
 	/* End */
 
+	// Jacobsthal 수열을 생성하는 함수 호출
 	std::deque<size_t> jacobsthalDeque = getJacobsthalDeque(half);
+
+	// 첫 번쨰 절반에 대해 반복문 실행
 	for (size_t i = 0; i < half; ++i)
 	{
+		// Jacobsthal 인덱스에 해당하는 'nord' 컨테이너의 마지막 값을 가져옴
 		size_t y = nord[sequnceDeque[jacobsthalDeque[i] - 1]].back();
+		// 'nord' 컨테이너의 마지막 값을 제거
 		nord[sequnceDeque[jacobsthalDeque[i] - 1]].pop_back();
+
+		// 'firstHalf' 덱의 시작부터 탐색
 		std::deque<size_t>::iterator it = firstHalf.begin();
+		// Jacobsthal 수열 인덱스와 일치하는 값을 찾을 떄 까지 반복
 		while (*it != sequnceDeque[jacobsthalDeque[i] - 1])
 			++it;
+
+		// 삽일할 인덱스를 초기화
 		size_t	index = 0;
+		// 첫 번쨰 반복이 아니라면 삽입할 포인트를 찾음
 		if (i != 0)
+			// 주어진 값이 들어갈 위치를 찾아서 반환
 			index = findInsertPoint(y, std::deque<size_t>(firstHalf.begin(), it + 1));
+		// 첫 번쨰 반복일 경우 덱의 앞에 삽입
 		if (i == 0)
 			firstHalf.push_front(y);
 		else
+			// 아닐경우 삽입 위치에 삽입
 			firstHalf.insert(firstHalf.begin() + index, y);
-
-		/* TEST Output */
-		std::cout << "[" << i << "]" << "isert " << "[" << y << "] ";
-		for (std::deque<size_t>::iterator it = firstHalf.begin(); it != firstHalf.end(); ++it)
-		{
-			std::cout << *it << " ";
-		}
-		std::cout << std::endl;
-		/* End */
 	}
+	// 'sequnceDeque' 의 크기가 홀수인 경우
 	if (sequnceDeque.size() & 1)
 	{
+		// 마지막 요소에 대해 처리
 		size_t	i = sequnceDeque.size() - 1;
+		// 마지막 값을 삽입할 인덱스를 찾음
 		size_t	index = findInsertPoint(sequnceDeque[i], firstHalf);
+		// 해당 인덱스 위치에 삽입
 		firstHalf.insert(firstHalf.begin() + index, sequnceDeque[i]);
 	}
 	std::cout << std::endl;
+	// 정렬된 Deque를 sequncDeque에 복사
 	std::copy(firstHalf.begin(), firstHalf.end(), sequnceDeque.begin());
 }
 
+/**
+ * @brief
+ * 이진 탐색을 기반으로 삽입 지점을 찾아서 리턴하는 함수 (Deque Version)
+ * @param x
+ * @param sequence
+ * @return size_t
+ */
 size_t	PmergeMe::findInsertPoint(size_t x, const std::deque<size_t>& sequence)
 {
 	size_t	left = 0;
@@ -260,6 +273,13 @@ void	PmergeMe::sort(std::vector<size_t>& sequenceVector)
 	std::copy(firstHalf.begin(), firstHalf.end(), sequenceVector.begin());
 }
 
+/**
+ * @brief
+ * 이진 탐색을 기반으로 삽입 지점을 찾아서 리턴하는 함수(Vector Version)
+ * @param x
+ * @param sequence
+ * @return size_t
+ */
 size_t	PmergeMe::findInsertPoint(size_t x, const std::vector<size_t>& sequence)
 {
 	size_t	left = 0;
