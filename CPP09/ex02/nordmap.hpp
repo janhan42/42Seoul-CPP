@@ -6,19 +6,22 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 23:33:02 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/23 08:26:30 by janhan           ###   ########.fr       */
+/*   Updated: 2024/10/01 02:44:34 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include <deque>
-#include <utility>
 #ifndef NORDMAP_HPP
 # define NORDMAP_HPP
+
+#include <deque>
+#include <vector>
+#include <utility>
 
 template<typename Tkey, typename Tvalue, typename Tcontainer = std::vector<std::pair<Tkey, Tvalue> > >
 class nordMap
 {};
+
 
 template<typename TKey>
 class nordMap<TKey, std::deque<TKey>, std::deque<std::pair<TKey, std::deque<TKey> > > >

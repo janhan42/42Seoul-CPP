@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 09:07:05 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/09 08:37:08 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/30 17:49:06 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 class BitcoinExchange
 {
 	public:
+		/* OCCF */
 		BitcoinExchange();
 		BitcoinExchange(const BitcoinExchange& rhs);
 		BitcoinExchange& operator=(const BitcoinExchange& rhs);

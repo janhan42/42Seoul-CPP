@@ -6,14 +6,14 @@
 #    By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:49:02 by janhan            #+#    #+#              #
-#    Updated: 2024/09/09 21:43:35 by janhan           ###   ########.fr        #
+#    Updated: 2024/10/01 00:12:37 by janhan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=		RPN
 
 CXX				=		c++
-CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98
+CXXFLAGS		=		-Wall -Wextra -Werror -std=c++98 -g
 
 SRCS		=		main.cpp			\
 					RPN.cpp

@@ -9,12 +9,12 @@
 class RPN
 {
 	public:
+		/* OCCf */
 		RPN();
 		RPN(const RPN& rhs);
 		RPN& operator=(const RPN& rhs);
 		~RPN();
-
-		void		clear(void);
+		void		insertString(char* av);
 		void		insert(char c);
 		double		result(void) const;
 
@@ -24,6 +24,7 @@ class RPN
 				virtual const char* what(void) const throw();
 		};
 	private:
+		/* std::stack<double> use */
 		std::stack<double>	mStack;
 
 		void		push(double n);

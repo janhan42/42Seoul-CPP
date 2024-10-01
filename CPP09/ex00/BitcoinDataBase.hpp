@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 06:05:51 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/23 10:15:28 by janhan           ###   ########.fr       */
+/*   Updated: 2024/09/30 18:22:18 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ class BitcoinDataBase
 		BitcoinDataBase& operator=(const BitcoinDataBase& rhs);
 		~BitcoinDataBase();
 
-		float			getExcangeRateByDate(const std::string& date);
 		void			importDataBase(const std::string& databaseFilePath);
+		float			getExcangeRateByDate(const std::string& date);
 		size_t			getDatabaseSize(void) const;
 
 		class InvalidDatabaseException : public std::exception
@@ -50,8 +50,8 @@ class BitcoinDataBase
 				virtual const char* what(void) const throw();
 		};
 	private:
-		typedef std::map<std::string, float, std::less<std::string>, std::allocator<std::pair<const std::string, float> > > MapT;
 
+		typedef std::map<std::string, float, std::less<std::string>, std::allocator<std::pair<const std::string, float> > > MapT;
 		BitcoinDataBase::MapT			mDataBase;
 
 		const BitcoinDataBase::MapT&	getDataBase(void) const;

@@ -6,20 +6,23 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 14:37:17 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/09 21:43:36 by janhan           ###   ########.fr       */
+/*   Updated: 2024/10/01 00:31:57 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RPN.hpp"
 #include <cstddef>
 
+/* Default Constructor */
 RPN::RPN()
 {}
 
+/* Copy Constructor */
 RPN::RPN(const RPN& rhs)
 : mStack(rhs.mStack)
 {}
 
+/* Copy Assignment Operator */
 RPN& RPN::operator=(const RPN &rhs)
 {
 	if (this != &rhs)
@@ -29,12 +32,21 @@ RPN& RPN::operator=(const RPN &rhs)
 	return (*this);
 }
 
+/* Desturctor */
 RPN::~RPN()
 {}
 
-void	RPN::clear(void)
+void RPN::insertString(char* av)
 {
-	mStack = std::stack<double>();
+	for (std::size_t i = 0; av[i]; ++i)
+	{
+		if (i % 2 == 0 && av[i] != ' ')
+			insert(av[i]);
+		else if (i % 2 == 1 && av[i] == ' ')
+			continue;
+		else
+			throw RPN::ExpressionException();
+	}
 }
 
 void	RPN::insert(char c)
@@ -44,6 +56,7 @@ void	RPN::insert(char c)
 		push(c - '0');
 		return ;
 	}
+	/* 숫자가 아닐 경우 내부 스택에 저장되어있는 숫자가 2개 미만일 경우 */
 	if (size() < 2)
 		throw RPN::ExpressionException();
 	double a, b;
