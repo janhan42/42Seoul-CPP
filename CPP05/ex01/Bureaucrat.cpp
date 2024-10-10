@@ -6,7 +6,7 @@
 /*   By: janhan <janhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 02:17:28 by janhan            #+#    #+#             */
-/*   Updated: 2024/09/08 10:25:21 by janhan           ###   ########.fr       */
+/*   Updated: 2024/10/04 08:02:39 by janhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 Bureaucrat::Bureaucrat(std::string name, int grade)
 : mName(name)
+, mGrade(grade)
 {
 	setGrade(grade);
 }
@@ -85,7 +86,7 @@ void	Bureaucrat::setGrade(int grade)
 		throw	GradeTooHighException();
 	if (grade > 150)
 		throw	GradeTooLowException();
-	mGrade = grade;
+	// mGrade = grade;
 }
 
 std::ostream&	operator<<(std::ostream& os, Bureaucrat& rhs)
